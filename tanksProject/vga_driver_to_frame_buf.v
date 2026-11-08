@@ -164,28 +164,88 @@ parameter
 	RFM_DRAWING 	= 8'd7,
 	ERROR 			= 8'hFF;
 
-parameter MEMORY_SIZE = 16'd19200; // 160*120 // Number of memory spots ... highly reduced since memory is slow
+// seq start
+always @(posedge clk or negedge rst)
+begin
+	if (rst == 1'b0)
+	begin
+			S <= START;
+	end
+	else
+	begin
+			S <= NS;
+	end
+end
+	
+	
+// combo train tracks	
+always @ (*) begin
+	case (S)
+		START: begin 
+						if(KEY[3] == 1'b0)
+							NS = W2M_INIT;
+						else
+							NS = START;
+						end
+		W2M_INIT: NS = W2M_COND;
+		W2M_COND: if(i < 16'd19200)
+						NS = W2M_INC;
+					else
+						NS = W2M_DONE;
+		W2M_INC: NS = W2M_COND;
+		W2M_DONE: NS = W2M_DONE;
+	endcase
+end
+
+// seq train station
+always @ (posedge clk or negedge rst) begin
+	if (rst == 1'b0)
+	begin
+		the_vga_draw_frame_write_mem_address <= 15'd0;
+		the_vga_draw_frame_write_mem_data <= 24'd0;
+		the_vga_draw_frame_write_a_pixel <= 1'b1;
+	end
+	else
+	begin
+		case (S)
+			START:
+				begin
+					the_vga_draw_frame_write_mem_address <= 15'd0;
+					the_vga_draw_frame_write_mem_data <= 24'd0;
+					the_vga_draw_frame_write_a_pixel <= 1'b1;
+				end
+			W2M_INIT: i <= 15'd0;
+			W2M_COND: the_vga_draw_frame_write_mem_data <= 24'hFFFFFF;
+			W2M_INC: 
+				begin
+					the_vga_draw_frame_write_mem_address <= the_vga_draw_frame_write_mem_address + 15'd1;
+					i <= i + 15'd1;
+				end
+		endcase
+end
+
+/*parameter MEMORY_SIZE = 16'd19200; // 160*120 // Number of memory spots ... highly reduced since memory is slow
 parameter PIXEL_VIRTUAL_SIZE = 16'd4; // Pixels per spot - therefore 4x4 pixels are drawn per memory location
 
 /* ACTUAL VGA RESOLUTION */
-parameter VGA_WIDTH = 16'd640; 
-parameter VGA_HEIGHT = 16'd480;
+//parameter VGA_WIDTH = 16'd640; 
+//parameter VGA_HEIGHT = 16'd480;
 
 /* Our reduced RESOLUTION 160 by 120 needs a memory of 19,200 words each 24 bits wide */
-parameter VIRTUAL_PIXEL_WIDTH = VGA_WIDTH/PIXEL_VIRTUAL_SIZE; // 160
-parameter VIRTUAL_PIXEL_HEIGHT = VGA_HEIGHT/PIXEL_VIRTUAL_SIZE; // 120
+//parameter VIRTUAL_PIXEL_WIDTH = VGA_WIDTH/PIXEL_VIRTUAL_SIZE; // 160
+//parameter VIRTUAL_PIXEL_HEIGHT = VGA_HEIGHT/PIXEL_VIRTUAL_SIZE; // 120
 
 /* idx_location stores all the locations in the */
-reg [14:0] idx_location;
+//reg [14:0] idx_location;
 /* !!!!!!!!!NOTE!!!!!!!
  - FLAG logic is a bad way to approach this, but I was lazy - I should implement this as an FSM for the button grabs.  */
-reg flag1;
-reg flag2;
+//reg flag1;
+//reg flag2;
 
 // Just so I can see the address being calculated
-assign LEDR = idx_location;
+//assign LEDR = idx_location;
 
-always @(posedge clk or negedge rst)
+/*always @(posedge clk or negedge rst)
 begin	
 	if (rst == 1'b0)
 	begin
@@ -199,11 +259,11 @@ begin
 	begin
 		/* !!!!! NOTE
 			I use flag logic to cludge this together - a bad idea */
-		if (KEY[1] == 1'b0 && flag1 == 1'b0)
+		/*if (KEY[1] == 1'b0 && flag1 == 1'b0)
 		begin
 			/* this is the code to write a pixel when KEY[1] is pressed */
-			the_vga_draw_frame_write_mem_address <= idx_location;
-			the_vga_draw_frame_write_mem_data <= {SW[7:0], SW[7:0], SW[7:0]};
+			/*the_vga_draw_frame_write_mem_address <= 15'd9660;
+			the_vga_draw_frame_write_mem_data <= {24'hFFFFFF};
 			the_vga_draw_frame_write_a_pixel <= 1'b1;
 			flag1 <= 1'b1;
 		end
@@ -221,7 +281,7 @@ begin
 		/* !!!!! NOTE
 			I use flag logic to cludge this together - a bad idea */
 		/* this is the code to increment the idx_location, which is the address to draw the pixel into the frame memory */
-		if (KEY[2] == 1'b0  && flag2 == 1'b0)
+		/*if (KEY[2] == 1'b0  && flag2 == 1'b0)
 		begin
 			flag2 <= 1'b1;
 			idx_location <= idx_location + 1'b1;
@@ -232,6 +292,7 @@ begin
 		end
 
 	end
+	
+end*/
 end
-
 endmodule

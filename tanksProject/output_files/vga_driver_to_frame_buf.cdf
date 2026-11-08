@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("M:/ece_287/VGA_ON_DE1_SOC_2024/VGA_ON_DE1_SOC_2024/vga_driver_to_frame_buf/output_files/") File("vga_driver_to_frame_buf.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("M:/ece_287/tanksProject/output_files/") File("vga_driver_to_frame_buf.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
