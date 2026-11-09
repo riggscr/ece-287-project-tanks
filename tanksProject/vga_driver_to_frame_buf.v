@@ -148,7 +148,10 @@ vga_frame_driver my_frame_driver(
 	.the_vga_draw_frame_write_a_pixel(the_vga_draw_frame_write_a_pixel)
 );
 
-reg [15:0]i;
+reg [9:0] tempx;
+reg [9:0] tempy;
+// reg [15:0] btxy;
+//reg [15:0]i;
 reg [7:0]S;
 reg [7:0]NS;
 parameter 
@@ -162,7 +165,23 @@ parameter
 	RFM_INIT_START = 8'd5,
 	RFM_INIT_WAIT 	= 8'd6,
 	RFM_DRAWING 	= 8'd7,
+	// COLOR
+	COLOR_BTANK 		= 8'd8,
+	COLOR_RTANK			= 8'd9,
+	COLOR_MAP		= 8'd10,
 	ERROR 			= 8'hFF;
+
+parameter MEMORY_SIZE = 16'd19200; // 160*120 // Number of memory spots ... highly reduced since memory is slow
+parameter PIXEL_VIRTUAL_SIZE = 16'd4; // Pixels per spot - therefore 4x4 pixels are drawn per memory location
+parameter MAX_X = 15'd159; // max x coordinate
+parameter MAX_Y = 15'd119; // max y coordinate
+/* ACTUAL VGA RESOLUTION */
+parameter VGA_WIDTH = 16'd640; 
+parameter VGA_HEIGHT = 16'd480;
+
+/* Our reduced RESOLUTION 160 by 120 needs a memory of 19,200 words each 24 bits wide */
+parameter VIRTUAL_PIXEL_WIDTH = VGA_WIDTH/PIXEL_VIRTUAL_SIZE; // 160
+parameter VIRTUAL_PIXEL_HEIGHT = VGA_HEIGHT/PIXEL_VIRTUAL_SIZE; // 120
 
 // seq start
 always @(posedge clk or negedge rst)
@@ -188,10 +207,18 @@ always @ (*) begin
 							NS = START;
 						end
 		W2M_INIT: NS = W2M_COND;
-		W2M_COND: if(i < 16'd19200)
-						NS = W2M_INC;
+		W2M_COND: if((tempx > 15'd0) & (tempx < 15'd8) & (tempy > 15'd0) & (tempy < 15'd10)) //i == 15'd9660 & i == 15'd9661 & i == 15'd9780 & i == 15'd9781
+						NS = COLOR_BTANK;
+					else if((tempx > 15'd151) & (tempx < 15'd159) & (tempy > 15'd109) & (tempy < 15'd119))
+						NS = COLOR_RTANK;
+					else if ((tempx <= MAX_X) & (tempy <= MAX_Y))
+						NS = COLOR_MAP;
 					else
 						NS = W2M_DONE;
+						
+		COLOR_BTANK: NS = W2M_INC;
+		COLOR_RTANK: NS = W2M_INC;
+		COLOR_MAP: NS = W2M_INC;
 		W2M_INC: NS = W2M_COND;
 		W2M_DONE: NS = W2M_DONE;
 	endcase
@@ -203,7 +230,7 @@ always @ (posedge clk or negedge rst) begin
 	begin
 		the_vga_draw_frame_write_mem_address <= 15'd0;
 		the_vga_draw_frame_write_mem_data <= 24'd0;
-		the_vga_draw_frame_write_a_pixel <= 1'b1;
+		the_vga_draw_frame_write_a_pixel <= 1'b0;
 	end
 	else
 	begin
@@ -212,28 +239,46 @@ always @ (posedge clk or negedge rst) begin
 				begin
 					the_vga_draw_frame_write_mem_address <= 15'd0;
 					the_vga_draw_frame_write_mem_data <= 24'd0;
+					the_vga_draw_frame_write_a_pixel <= 1'b1;	
+				end
+			W2M_INIT: 
+				begin		
+					tempx <= 9'd0;
+					tempy <= 9'd0;
+				end
+			COLOR_BTANK: 
+				begin
+					the_vga_draw_frame_write_mem_address <= 15'd120 * tempx + tempy;
+					the_vga_draw_frame_write_mem_data <= 24'h4A4AF7;
 					the_vga_draw_frame_write_a_pixel <= 1'b1;
 				end
-			W2M_INIT: i <= 15'd0;
-			W2M_COND: the_vga_draw_frame_write_mem_data <= 24'hFFFFFF;
+			COLOR_RTANK:
+				begin
+					the_vga_draw_frame_write_mem_address <= 15'd120 * tempx + tempy;
+					the_vga_draw_frame_write_mem_data <= 24'hED0909;
+					the_vga_draw_frame_write_a_pixel <= 1'b1;
+				end
+			COLOR_MAP: 
+				begin
+					the_vga_draw_frame_write_mem_address <= 15'd120 * tempx + tempy;
+					the_vga_draw_frame_write_mem_data <= 24'hF7D88F;
+					the_vga_draw_frame_write_a_pixel <= 1'b1;
+				end
 			W2M_INC: 
 				begin
 					the_vga_draw_frame_write_mem_address <= the_vga_draw_frame_write_mem_address + 15'd1;
-					i <= i + 15'd1;
+					if(tempy == MAX_Y) begin
+						tempx <= tempx + 9'd1; 
+						tempy <= 9'd0;
+					end
+					else begin
+						tempy <= tempy + 9'd1;
+					end
 				end
+			W2M_DONE: the_vga_draw_frame_write_a_pixel <= 1'b0;
 		endcase
 end
 
-/*parameter MEMORY_SIZE = 16'd19200; // 160*120 // Number of memory spots ... highly reduced since memory is slow
-parameter PIXEL_VIRTUAL_SIZE = 16'd4; // Pixels per spot - therefore 4x4 pixels are drawn per memory location
-
-/* ACTUAL VGA RESOLUTION */
-//parameter VGA_WIDTH = 16'd640; 
-//parameter VGA_HEIGHT = 16'd480;
-
-/* Our reduced RESOLUTION 160 by 120 needs a memory of 19,200 words each 24 bits wide */
-//parameter VIRTUAL_PIXEL_WIDTH = VGA_WIDTH/PIXEL_VIRTUAL_SIZE; // 160
-//parameter VIRTUAL_PIXEL_HEIGHT = VGA_HEIGHT/PIXEL_VIRTUAL_SIZE; // 120
 
 /* idx_location stores all the locations in the */
 //reg [14:0] idx_location;
