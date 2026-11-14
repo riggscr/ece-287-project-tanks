@@ -100,7 +100,7 @@ wire clk;
 wire rst;
 
 assign clk = CLOCK_50;
-assign rst = KEY[0];
+assign rst = SW[0];
 
 wire [9:0]SW_db;
 
@@ -148,10 +148,14 @@ vga_frame_driver my_frame_driver(
 	.the_vga_draw_frame_write_a_pixel(the_vga_draw_frame_write_a_pixel)
 );
 
-reg [9:0] tempx;
-reg [9:0] tempy;
-// reg [15:0] btxy;
-//reg [15:0]i;
+/* idx_location stores all the locations in the */
+reg [14:0] idx_location;
+reg [4:0] direction;
+reg [15:0] i;
+reg [9:0] xcoor;
+reg [9:0] ycoor;
+reg [9:0] prev_xcoor;
+reg [9:0] prev_ycoor;
 reg [7:0]S;
 reg [7:0]NS;
 parameter 
@@ -165,16 +169,11 @@ parameter
 	RFM_INIT_START = 8'd5,
 	RFM_INIT_WAIT 	= 8'd6,
 	RFM_DRAWING 	= 8'd7,
-	// COLOR
-	COLOR_BTANK 		= 8'd8,
-	COLOR_RTANK			= 8'd9,
-	COLOR_MAP		= 8'd10,
 	ERROR 			= 8'hFF;
 
 parameter MEMORY_SIZE = 16'd19200; // 160*120 // Number of memory spots ... highly reduced since memory is slow
 parameter PIXEL_VIRTUAL_SIZE = 16'd4; // Pixels per spot - therefore 4x4 pixels are drawn per memory location
-parameter MAX_X = 15'd159; // max x coordinate
-parameter MAX_Y = 15'd119; // max y coordinate
+
 /* ACTUAL VGA RESOLUTION */
 parameter VGA_WIDTH = 16'd640; 
 parameter VGA_HEIGHT = 16'd480;
@@ -183,51 +182,83 @@ parameter VGA_HEIGHT = 16'd480;
 parameter VIRTUAL_PIXEL_WIDTH = VGA_WIDTH/PIXEL_VIRTUAL_SIZE; // 160
 parameter VIRTUAL_PIXEL_HEIGHT = VGA_HEIGHT/PIXEL_VIRTUAL_SIZE; // 120
 
-// seq start
-always @(posedge clk or negedge rst)
-begin
-	if (rst == 1'b0)
-	begin
-			S <= START;
-	end
+parameter
+	INIT = 8'd8,
+	KEY_SEL = 8'd9,
+	MOVE = 8'd10,
+	DRAW = 8'd11,
+	WAITD = 8'd12,
+	WAITU = 8'd13,
+	WAITL = 8'd14,
+	WAITR = 8'd15,
+	CLEANUP = 8'd16;
+
+always @ (posedge clk or negedge rst)
+	if(rst == 1'b0)
+		S <= INIT;
 	else
-	begin
-			S <= NS;
-	end
-end
-	
-	
-// combo train tracks	
-always @ (*) begin
+		S <= NS;
+
+always @ (*)
+begin
 	case (S)
-		START: begin 
-						if(KEY[3] == 1'b0)
-							NS = W2M_INIT;
-						else
-							NS = START;
-						end
-		W2M_INIT: NS = W2M_COND;
-		W2M_COND: if((tempx > 15'd0) & (tempx < 15'd8) & (tempy > 15'd0) & (tempy < 15'd10)) //i == 15'd9660 & i == 15'd9661 & i == 15'd9780 & i == 15'd9781
-						NS = COLOR_BTANK;
-					else if((tempx > 15'd151) & (tempx < 15'd159) & (tempy > 15'd109) & (tempy < 15'd119))
-						NS = COLOR_RTANK;
-					else if ((tempx <= MAX_X) & (tempy <= MAX_Y))
-						NS = COLOR_MAP;
-					else
-						NS = W2M_DONE;
-						
-		COLOR_BTANK: NS = W2M_INC;
-		COLOR_RTANK: NS = W2M_INC;
-		COLOR_MAP: NS = W2M_INC;
-		W2M_INC: NS = W2M_COND;
-		W2M_DONE: NS = W2M_DONE;
+		INIT: NS = KEY_SEL;
+		KEY_SEL: 
+		begin
+			if(KEY[1] == 1'b0)
+				NS = WAITD;
+			else if(KEY[2] == 1'b0)
+				NS = WAITU;
+			else if(KEY[3] == 1'b0)
+				NS = WAITL;
+			else if(KEY[0] == 1'b0)
+				NS = WAITR;
+			else
+				NS = KEY_SEL;
+		end
+		MOVE: NS = DRAW;
+		DRAW: NS = CLEANUP;
+		WAITD:
+		begin
+			if(KEY[1] == 1'b1)
+				NS = MOVE;
+			else 
+				NS = WAITD;
+		end
+		WAITU:
+		begin
+			if(KEY[2] == 1'b1)
+				NS = MOVE;
+			else
+				NS = WAITU;
+		end
+		WAITL:
+		begin
+			if(KEY[3] == 1'b1)
+				NS = MOVE;
+			else
+				NS = WAITL;
+		end
+		WAITR:
+		begin
+			if(KEY[0] == 1'b1)
+				NS = MOVE;
+			else
+				NS = WAITR;
+		end
+		CLEANUP: NS = KEY_SEL;
+		default: NS = INIT;
 	endcase
 end
 
-// seq train station
-always @ (posedge clk or negedge rst) begin
-	if (rst == 1'b0)
+always @ (posedge clk or negedge rst)
+begin
+	if(rst == 1'b0)
 	begin
+		xcoor <= 10'd0;
+		ycoor <= 10'd0;
+		prev_xcoor <= 10'd0;
+		prev_ycoor <= 10'd0;		
 		the_vga_draw_frame_write_mem_address <= 15'd0;
 		the_vga_draw_frame_write_mem_data <= 24'd0;
 		the_vga_draw_frame_write_a_pixel <= 1'b0;
@@ -235,109 +266,106 @@ always @ (posedge clk or negedge rst) begin
 	else
 	begin
 		case (S)
-			START:
+			INIT:
+			begin
+				idx_location <= 15'd120 * xcoor + ycoor;
+				xcoor <= 10'd0;
+				ycoor <= 10'd0;
+				prev_xcoor <= 10'd0;
+				prev_ycoor <= 10'd0;
+				the_vga_draw_frame_write_mem_address <= 15'd0;
+				the_vga_draw_frame_write_mem_data <= 24'd0;
+				the_vga_draw_frame_write_a_pixel <= 1'b0;
+			end
+			KEY_SEL: 
+			begin
+				the_vga_draw_frame_write_a_pixel <= 1'b0;
+				if(KEY[1] == 1'b0)
+					direction <= 4'd0;
+				else if(KEY[2] == 1'd0)
+					direction <= 4'd1;
+				else if(KEY[3] == 1'd0)
+					direction <= 4'd2;
+				else if(KEY[0] == 1'd0)
+					direction <= 4'd3;
+			end
+			WAITU: the_vga_draw_frame_write_a_pixel <= 1'b0;
+			WAITD: the_vga_draw_frame_write_a_pixel <= 1'b0;
+			WAITL: the_vga_draw_frame_write_a_pixel <= 1'b0;
+			WAITR: the_vga_draw_frame_write_a_pixel <= 1'b0;
+			MOVE: 
+			begin
+					case (direction)
+						4'd0: //down
+						begin
+							//idx_location <= idx_location + 1'b1;
+							prev_xcoor <= xcoor;
+							prev_ycoor <= ycoor;							
+							ycoor <= (ycoor < 10'd119) ? ycoor + 1'b1 : ycoor;
+							the_vga_draw_frame_write_a_pixel <= 1'b0;
+						end
+						4'd1: //up
+						begin
+							//idx_location <= idx_location - 1'b1;
+							prev_xcoor <= xcoor;
+							prev_ycoor <= ycoor;
+							ycoor <= (ycoor > 10'd0) ? ycoor - 1'b1 : ycoor;
+							the_vga_draw_frame_write_a_pixel <= 1'b0;
+						end
+						4'd2: //left
+						begin
+							//idx_location <= idx_location - 15'd120;
+							prev_xcoor <= xcoor;
+							prev_ycoor <= ycoor;
+							xcoor <= (xcoor > 10'd0) ? xcoor - 1'b1 : xcoor;
+							the_vga_draw_frame_write_a_pixel <= 1'b0;
+						end
+						4'd3: //right
+						begin
+							//idx_location <= idx_location + 15'd120;
+							prev_xcoor <= xcoor;
+							prev_ycoor <= ycoor;
+							xcoor <= (xcoor < 10'd159) ? xcoor + 1'b1 : xcoor;
+							the_vga_draw_frame_write_a_pixel <= 1'b0;
+						end
+					endcase
+			end
+			DRAW:
 				begin
-					the_vga_draw_frame_write_mem_address <= 15'd0;
-					the_vga_draw_frame_write_mem_data <= 24'd0;
-					the_vga_draw_frame_write_a_pixel <= 1'b1;	
-				end
-			W2M_INIT: 
-				begin		
-					tempx <= 9'd0;
-					tempy <= 9'd0;
-				end
-			COLOR_BTANK: 
-				begin
-					the_vga_draw_frame_write_mem_address <= 15'd120 * tempx + tempy;
+					the_vga_draw_frame_write_mem_address <= 15'd120 * xcoor + ycoor;
 					the_vga_draw_frame_write_mem_data <= 24'h4A4AF7;
 					the_vga_draw_frame_write_a_pixel <= 1'b1;
 				end
-			COLOR_RTANK:
+			CLEANUP:
 				begin
-					the_vga_draw_frame_write_mem_address <= 15'd120 * tempx + tempy;
-					the_vga_draw_frame_write_mem_data <= 24'hED0909;
-					the_vga_draw_frame_write_a_pixel <= 1'b1;
+					case (direction)
+						4'd0: //down
+						begin
+							the_vga_draw_frame_write_mem_address <= 15'd120 * prev_xcoor + prev_ycoor;
+							the_vga_draw_frame_write_mem_data <= 24'hF7D88F;
+							the_vga_draw_frame_write_a_pixel <= 1'b1;
+						end
+						4'd1: //up
+						begin
+							the_vga_draw_frame_write_mem_address <= 15'd120 * prev_xcoor + prev_ycoor;
+							the_vga_draw_frame_write_mem_data <= 24'hF7D88F;
+							the_vga_draw_frame_write_a_pixel <= 1'b1;
+						end
+						4'd2: //left
+						begin
+							the_vga_draw_frame_write_mem_address <= 15'd120 * prev_xcoor + prev_ycoor;
+							the_vga_draw_frame_write_mem_data <= 24'hF7D88F;
+							the_vga_draw_frame_write_a_pixel <= 1'b1;
+						end
+						4'd3: //right
+						begin
+							the_vga_draw_frame_write_mem_address <= 15'd120 * prev_xcoor + prev_ycoor;
+							the_vga_draw_frame_write_mem_data <= 24'hF7D88F;
+							the_vga_draw_frame_write_a_pixel <= 1'b1;
+						end
+					endcase
 				end
-			COLOR_MAP: 
-				begin
-					the_vga_draw_frame_write_mem_address <= 15'd120 * tempx + tempy;
-					the_vga_draw_frame_write_mem_data <= 24'hF7D88F;
-					the_vga_draw_frame_write_a_pixel <= 1'b1;
-				end
-			W2M_INC: 
-				begin
-					the_vga_draw_frame_write_mem_address <= the_vga_draw_frame_write_mem_address + 15'd1;
-					if(tempy == MAX_Y) begin
-						tempx <= tempx + 9'd1; 
-						tempy <= 9'd0;
-					end
-					else begin
-						tempy <= tempy + 9'd1;
-					end
-				end
-			W2M_DONE: the_vga_draw_frame_write_a_pixel <= 1'b0;
 		endcase
-end
-
-
-/* idx_location stores all the locations in the */
-//reg [14:0] idx_location;
-/* !!!!!!!!!NOTE!!!!!!!
- - FLAG logic is a bad way to approach this, but I was lazy - I should implement this as an FSM for the button grabs.  */
-//reg flag1;
-//reg flag2;
-
-// Just so I can see the address being calculated
-//assign LEDR = idx_location;
-
-/*always @(posedge clk or negedge rst)
-begin	
-	if (rst == 1'b0)
-	begin
-		the_vga_draw_frame_write_mem_address <= 15'd0;
-		the_vga_draw_frame_write_mem_data <= 24'd0;
-		the_vga_draw_frame_write_a_pixel <= 1'b0;
-		flag1 <= 1'b0;
-		flag2 <= 1'b0;
 	end
-	else
-	begin
-		/* !!!!! NOTE
-			I use flag logic to cludge this together - a bad idea */
-		/*if (KEY[1] == 1'b0 && flag1 == 1'b0)
-		begin
-			/* this is the code to write a pixel when KEY[1] is pressed */
-			/*the_vga_draw_frame_write_mem_address <= 15'd9660;
-			the_vga_draw_frame_write_mem_data <= {24'hFFFFFF};
-			the_vga_draw_frame_write_a_pixel <= 1'b1;
-			flag1 <= 1'b1;
-		end
-		else if (KEY[1] == 1'b0)
-		begin
-			flag1 <= 1'b1;
-			the_vga_draw_frame_write_a_pixel <= 1'b0;
-		end
-		else
-		begin
-			flag1 <= 1'b0;
-			the_vga_draw_frame_write_a_pixel <= 1'b0;
-		end
-		
-		/* !!!!! NOTE
-			I use flag logic to cludge this together - a bad idea */
-		/* this is the code to increment the idx_location, which is the address to draw the pixel into the frame memory */
-		/*if (KEY[2] == 1'b0  && flag2 == 1'b0)
-		begin
-			flag2 <= 1'b1;
-			idx_location <= idx_location + 1'b1;
-		end
-		else if (KEY[2] == 1'b1)
-		begin
-			flag2 <= 1'b0;
-		end
-
-	end
-	
-end*/
 end
 endmodule
