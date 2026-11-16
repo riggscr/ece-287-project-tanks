@@ -1,0 +1,3 @@
+module subcount(input [3:0] KEY, input clk, input rst, output wire [3:0] dir);
+
+

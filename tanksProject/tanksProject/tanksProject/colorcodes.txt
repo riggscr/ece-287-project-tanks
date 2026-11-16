@@ -1,0 +1,5 @@
+DesertMap = 24'hF7D88F
+
+BlueTank = 24'h4A4AF7
+
+RedTank = 24'hED0909
