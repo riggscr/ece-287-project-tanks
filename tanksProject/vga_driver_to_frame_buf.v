@@ -55,9 +55,9 @@ module vga_driver_to_frame_buf	(
 	output		     [9:0]		LEDR,
 
 	//////////// PS2 //////////
-	//inout 		          		PS2_CLK,
+	inout 		          		PS2_CLK,
 	//inout 		          		PS2_CLK2,
-	//inout 		          		PS2_DAT,
+	inout 		          		PS2_DAT,
 	//inout 		          		PS2_DAT2,
 
 	//////////// SW //////////
@@ -149,7 +149,6 @@ vga_frame_driver my_frame_driver(
 );
 
 /* idx_location stores all the locations in the */
-
 reg [14:0] idx_location;
 reg [4:0] direction;
 reg [15:0] i;
@@ -160,6 +159,14 @@ reg [9:0] prev_BY;
 reg makeBox;
 reg stop;
 
+//wire [3:0] blue_dir;
+
+//subcount instantiation
+//subcount blue_subcount(KEY[3:0], clk, rst, blue_dir);
+
+//sprite instantiation
+btankmap sprite(drawX, drawY, direction, bdraw);
+
 reg [7:0]S;
 reg [7:0]NS;
 
@@ -168,6 +175,13 @@ reg [9:0] blueX;
 reg [9:0] blueY;
 reg [9:0] drawX;
 reg [9:0] drawY;
+reg [3:0] key;
+wire bdraw;
+
+
+// tank agnostic
+reg [9:0] boxh;
+reg [9:0] boxv;
 
 parameter 
 	START 			= 8'd0,
@@ -185,7 +199,7 @@ parameter
 parameter MEMORY_SIZE = 16'd19200; // 160*120 // Number of memory spots ... highly reduced since memory is slow
 parameter PIXEL_VIRTUAL_SIZE = 16'd4; // Pixels per spot - therefore 4x4 pixels are drawn per memory location
 parameter BOXV	= 10'd10; // vertical max length of box
-parameter BOXH = 10'd8; // horizontal max length of box
+parameter BOXH = 10'd09; // horizontal max length of box
 /* ACTUAL VGA RESOLUTION */
 parameter VGA_WIDTH = 16'd640; 
 parameter VGA_HEIGHT = 16'd480;
@@ -205,7 +219,65 @@ parameter
 	WAITL = 8'd14,
 	WAITR = 8'd15,
 	CLEANUP = 8'd16;
+	
+wire [7:0] scan_code;
+wire scan_ready;
+reg [3:0] blue_dir_reg;
+reg key_handled;
+reg ignore_next;
 
+wire [3:0] blue_dir_wire;
+
+//assign blue_dir_wire = blue_dir_reg;
+
+assign LEDR[7:0] = scan_code;
+assign LEDR[8]   = ignore_next;
+assign LEDR[9]   = scan_ready;
+
+//ps2 instantiation                                                        rst: gemini assumed active-low for SW[0] - may need to change
+ps2 my_keyboard(.clock_key(PS2_CLK), .data_key(PS2_DAT), .clock_fpga(clk), .reset(rst), .data_out(scan_code), .new_code(scan_ready));
+
+//ps2 code
+always @(posedge clk or negedge rst) begin
+	if(rst == 1'b0) begin
+		blue_dir_reg <= 4'd0;
+		key_handled <= 1'b0;
+		ignore_next <= 1'b0;
+	end
+	else begin
+		if(scan_ready && (!key_handled)) begin
+			key_handled <= 1'b1;
+			
+			if(scan_code == 8'hF0) begin
+				// Key released: flag the next incoming code to be ingonred
+				ignore_next <= 1'b1;
+			end
+			// Code following F0, clear the flag and do nothing
+			else if(ignore_next == 1'b1) begin
+				ignore_next <= 1'b0;
+			end
+			// Valid, fresh key press
+			else begin
+				case(scan_code)
+					8'h1B : blue_dir_reg <= 4'b0001; // S -> down
+					8'h1D : blue_dir_reg <= 4'b0010; // W -> up
+					8'h1C : blue_dir_reg <= 4'b0100; // A -> left
+					8'h23 : blue_dir_reg <= 4'b1000; // D -> right
+					default : blue_dir_reg <= 4'b0000;
+				endcase
+			end
+		end
+		else if(!scan_ready) begin
+			key_handled <= 1'b0;
+		end
+		
+		if(S == MOVE  && blue_dir_reg != 4'b0000) begin
+			blue_dir_reg <= 4'b0000;
+		end
+	end	
+end	
+	
+//main fsm	
 always @ (posedge clk or negedge rst)
 	if(rst == 1'b0)
 		S <= RESET;
@@ -225,14 +297,14 @@ begin
 		end
 		KEY_SEL: 
 		begin
-			if(KEY[1] == 1'b0)
-				NS = WAITD;
-			else if(KEY[2] == 1'b0)
-				NS = WAITU;
-			else if(KEY[3] == 1'b0)
-				NS = WAITL;
-			else if(KEY[0] == 1'b0)
-				NS = WAITR;
+			if(blue_dir_reg[0] == 1'b1)
+				NS = MOVE;
+			else if(blue_dir_reg[1] == 1'b1)
+				NS = MOVE;
+			else if(blue_dir_reg[2] == 1'b1)
+				NS = MOVE;
+			else if(blue_dir_reg[3] == 1'b1)
+				NS = MOVE;
 			else
 				NS = KEY_SEL;
 		end
@@ -243,34 +315,6 @@ begin
 				else
 					NS = DRAW;
 				end
-		WAITD:
-		begin
-			if(KEY[1] == 1'b1)
-				NS = MOVE;
-			else 
-				NS = WAITD;
-		end
-		WAITU:
-		begin
-			if(KEY[2] == 1'b1)
-				NS = MOVE;
-			else
-				NS = WAITU;
-		end
-		WAITL:
-		begin
-			if(KEY[3] == 1'b1)
-				NS = MOVE;
-			else
-				NS = WAITL;
-		end
-		WAITR:
-		begin
-			if(KEY[0] == 1'b1)
-				NS = MOVE;
-			else
-				NS = WAITR;
-		end
 		CLEANUP: begin 
 					if(stop == 1'b1)
 						NS = KEY_SEL;
@@ -296,6 +340,9 @@ begin
 		stop <= 1'b0;
 		drawY <= 10'd0;
 		makeBox <= 1'b0;
+		boxv <= 10'd10;
+		boxh <= 10'd9;
+		direction <= 4'd0;
 		the_vga_draw_frame_write_mem_address <= 15'd0;
 		the_vga_draw_frame_write_mem_data <= 24'd0;
 		the_vga_draw_frame_write_a_pixel <= 1'b0;
@@ -316,106 +363,107 @@ begin
 				blueY <= 10'd60;
 				drawX <= 10'd0;
 				drawY <= 10'd0;
+				boxv <= 10'd10;
+				boxh <= 10'd9;
+				direction <= 4'd0;
 				the_vga_draw_frame_write_mem_address <= 15'd0;
 				the_vga_draw_frame_write_mem_data <= 24'd0;
 				the_vga_draw_frame_write_a_pixel <= 1'b0;
 			end
 			RESET:
 			begin
-				the_vga_draw_frame_write_mem_address <= idx_location;
-				the_vga_draw_frame_write_mem_data <= 24'hF7D88F;
 				the_vga_draw_frame_write_a_pixel <= 1'b1;
-				idx_location <= idx_location + 1'b1;
+				idx_location <= ((15'd120 * xcoor) + ycoor);
+				the_vga_draw_frame_write_mem_address <= ((15'd120 * xcoor) + ycoor);
+				
+				//orange border generation
+				if((xcoor < VIRTUAL_PIXEL_WIDTH) & (ycoor < 10'd2 | ycoor > 10'd117))
+					the_vga_draw_frame_write_mem_data <= 24'hFF781F;
+				else if((xcoor < 10'd2 | xcoor > 10'd157) & (ycoor < VIRTUAL_PIXEL_HEIGHT))
+					the_vga_draw_frame_write_mem_data <= 24'hFF781F;
+				else
+					the_vga_draw_frame_write_mem_data <= 24'hF7D88F;
+				
+				//increment
+				if(ycoor == 10'd119)
+				begin
+					xcoor <= xcoor + 1'b1;
+					ycoor <= 10'd0;
+				end
+				else
+					ycoor <= ycoor + 1'b1;
 			end
 			KEY_SEL: 
 			begin
 				stop <= 1'b0;
 				the_vga_draw_frame_write_a_pixel <= 1'b0;
-				if(KEY[1] == 1'b0)
-					direction <= 4'd0;
-				else if(KEY[2] == 1'd0)
-					direction <= 4'd1;
-				else if(KEY[3] == 1'd0)
-					direction <= 4'd2;
-				else if(KEY[0] == 1'd0)
-					direction <= 4'd3;
+				if(blue_dir_reg[0] == 1'b1)
+					direction <= 4'd0; // down
+				else if(blue_dir_reg[1] == 1'd1)
+					direction <= 4'd1; // up
+				else if(blue_dir_reg[2] == 1'd1)
+					direction <= 4'd2; // left
+				else if(blue_dir_reg[3] == 1'd1)
+					direction <= 4'd3; // right
 			end
-			WAITU: the_vga_draw_frame_write_a_pixel <= 1'b0;
-			WAITD: the_vga_draw_frame_write_a_pixel <= 1'b0;
-			WAITL: the_vga_draw_frame_write_a_pixel <= 1'b0;
-			WAITR: the_vga_draw_frame_write_a_pixel <= 1'b0;
 			MOVE: 
 			begin
+					prev_BX <= blueX;
+					prev_BY <= blueY;
+					the_vga_draw_frame_write_a_pixel <= 1'b0;
 					case (direction)
 						4'd0: //down
 						begin
-							//idx_location <= idx_location + 1'b1;
-							prev_BX <= blueX;
-							prev_BY <= blueY;							
-							//ycoor <= (ycoor < 10'd119) ? ycoor + 1'b1 : ycoor;
+							//prev_BX <= blueX;
+							//prev_BY <= blueY;
+							boxv <= 10'd9;
+							boxh <= 10'd10;
 							blueY <= (blueY < 10'd119) ? blueY + 1'b1 : blueY;
-							/*if(blueY < 10'd119)
-								blueY <= blueY + 1'b1;
-							else
-								blueY <= blueY;*/
-							the_vga_draw_frame_write_a_pixel <= 1'b0;
+							//the_vga_draw_frame_write_a_pixel <= 1'b0;
 						end
 						4'd1: //up
 						begin
-							//idx_location <= idx_location - 1'b1;
-							prev_BX <= blueX;
-							prev_BY <= blueY;
-							//ycoor <= (ycoor > 10'd0) ? ycoor - 1'b1 : ycoor;
+							//prev_BX <= blueX;
+							//prev_BY <= blueY;
+							boxv <= 10'd9;
+							boxh <= 10'd10;
 							blueY <= (blueY > 10'd0) ? blueY - 1'b1 : blueY;
-							/*if(blueY > 10'd0)
-								blueY <= blueY - 1'b1;
-							else
-								blueY <= blueY;
-								*/
-							the_vga_draw_frame_write_a_pixel <= 1'b0;
+							//the_vga_draw_frame_write_a_pixel <= 1'b0;
 						end
 						4'd2: //left
 						begin
-							//idx_location <= idx_location - 15'd120;
-							prev_BX <= blueX;
-							prev_BY <= blueY;
-							//xcoor <= (xcoor > 10'd0) ? xcoor - 1'b1 : xcoor;
+							//prev_BX <= blueX;
+							//prev_BY <= blueY;
+							boxv <= 10'd10;
+							boxh <= 10'd9;
 							blueX <= (blueX > 10'd0) ? blueX - 1'b1 : blueX;
-							/*if(blueX > 10'd0)
-								blueX <= blueX - 1'b1;
-							else
-								blueX <= blueX;
-								*/
-							the_vga_draw_frame_write_a_pixel <= 1'b0;
+							//the_vga_draw_frame_write_a_pixel <= 1'b0;
 						end
 						4'd3: //right
 						begin
-							//idx_location <= idx_location + 15'd120;
-							prev_BX <= blueX;
-							prev_BY <= blueY;
-							//xcoor <= (xcoor < 10'd159) ? xcoor + 1'b1 : xcoor;
+							//prev_BX <= blueX;
+							//prev_BY <= blueY;
+							boxv <= 10'd10;
+							boxh <= 10'd9;
 							blueX <= (blueX < 10'd159) ? blueX + 1'b1 : blueX;
-							/*if(blueX < 10'd159)
-								blueX <= blueX + 1'b1;
-							else
-								blueX <= blueX;
-								*/
-							the_vga_draw_frame_write_a_pixel <= 1'b0;
+							//the_vga_draw_frame_write_a_pixel <= 1'b0;
 						end
 					endcase
 			end
 			DRAW:
 				begin
+					the_vga_draw_frame_write_a_pixel <= 1'b1;
 					if(makeBox == 1'b0) begin
-					//the_vga_draw_frame_write_mem_address <= 15'd120 * xcoor + ycoor;
 						the_vga_draw_frame_write_mem_address <= (15'd120 * (blueX + drawX)) + (blueY + drawY);
-						the_vga_draw_frame_write_mem_data <= 24'h4A4AF7;
-						the_vga_draw_frame_write_a_pixel <= 1'b1;
-						if(drawX < (BOXH - 1'b1))
+						if(bdraw == 1'b1)
+							the_vga_draw_frame_write_mem_data <= 24'h4A4AF7;
+						else
+							the_vga_draw_frame_write_mem_data <= 24'hF7D88F;
+						if(drawX < (boxh - 1'b1))
 							drawX <= drawX + 1'b1;
 						else begin
 							drawX <= 10'd0;
-							if(drawY < (BOXV - 1'b1))
+							if(drawY < (boxv - 1'b1))
 								drawY <= drawY + 1'b1;
 							else begin
 								makeBox <= 1'b1;
@@ -437,7 +485,7 @@ begin
 								
 								the_vga_draw_frame_write_mem_address <= (15'd120 * (prev_BX + drawX)) + prev_BY;
 								the_vga_draw_frame_write_a_pixel <= 1'b1;
-								if(drawX < (BOXH - 1'b1))
+								if(drawX < (boxh - 1'b1))
 									drawX <= drawX + 1'b1;
 								else begin
 									stop <= 1'b1;
@@ -447,9 +495,9 @@ begin
 							end
 							4'd1: //up
 							begin
-								the_vga_draw_frame_write_mem_address <= (15'd120 * (prev_BX + drawX)) + (prev_BY + BOXV - 1'b1);
+								the_vga_draw_frame_write_mem_address <= (15'd120 * (prev_BX + drawX)) + (prev_BY + boxv - 1'b1);
 								the_vga_draw_frame_write_a_pixel <= 1'b1;
-								if(drawX < (BOXH - 1'b1))
+								if(drawX < (boxh - 1'b1))
 									drawX <= drawX + 1'b1;
 								else begin
 									stop <= 1'b1;
@@ -459,9 +507,9 @@ begin
 							end
 							4'd2: //left
 							begin
-								the_vga_draw_frame_write_mem_address <= (15'd120 * (prev_BX + BOXH - 1'b1)) + (prev_BY + drawY);
+								the_vga_draw_frame_write_mem_address <= (15'd120 * (prev_BX + boxh - 1'b1)) + (prev_BY + drawY);
 								the_vga_draw_frame_write_a_pixel <= 1'b1;
-								if(drawY < (BOXV - 1'b1))
+								if(drawY < (boxv - 1'b1))
 									drawY <= drawY + 1'b1;
 								else begin
 									stop <= 1'b1;
@@ -473,7 +521,7 @@ begin
 							begin
 								the_vga_draw_frame_write_mem_address <= (15'd120 * prev_BX) + (prev_BY + drawY);
 								the_vga_draw_frame_write_a_pixel <= 1'b1;
-								if(drawY < (BOXV - 1'b1))
+								if(drawY < (boxv - 1'b1))
 									drawY <= drawY + 1'b1;
 								else begin
 									stop <= 1'b1;

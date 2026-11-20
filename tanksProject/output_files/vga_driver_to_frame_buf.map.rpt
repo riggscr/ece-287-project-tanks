@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_driver_to_frame_buf
-Sun Nov 15 00:08:18 2026
+Thu Nov 19 11:55:50 2026
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -14,70 +14,71 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |vga_driver_to_frame_buf|direction
- 10. State Machine - |vga_driver_to_frame_buf|S
- 11. State Machine - |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|wr_id
- 12. State Machine - |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|S
- 13. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db19|S
- 14. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db18|S
- 15. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db17|S
- 16. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db16|S
- 17. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db15|S
- 18. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db14|S
- 19. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db13|S
- 20. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db12|S
- 21. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db11|S
- 22. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db10|S
- 23. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db7|S
- 24. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db6|S
- 25. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db5|S
- 26. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db4|S
- 27. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db3|S
- 28. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db2|S
- 29. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db1|S
- 30. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db0|S
- 31. Registers Removed During Synthesis
- 32. Removed Registers Triggering Further Register Optimizations
- 33. General Register Statistics
- 34. Inverted Register Statistics
- 35. Multiplexer Restructuring Statistics (Restructuring Performed)
- 36. Source assignments for vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated
- 37. Source assignments for vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated
- 38. Source assignments for vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated
- 39. Parameter Settings for User Entity Instance: Top-level Entity: |vga_driver_to_frame_buf
- 40. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db0
- 41. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db1
- 42. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db2
- 43. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db3
- 44. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db4
- 45. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db5
- 46. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db6
- 47. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db7
- 48. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db10
- 49. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db11
- 50. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db12
- 51. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db13
- 52. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db14
- 53. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db15
- 54. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db16
- 55. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db17
- 56. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db18
- 57. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db19
- 58. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver
- 59. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component
- 60. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component
- 61. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component
- 62. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver|vga_driver:the_vga
- 63. altsyncram Parameter Settings by Entity Instance
- 64. Port Connectivity Checks: "vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame"
- 65. Port Connectivity Checks: "vga_frame_driver:my_frame_driver|vga_frame:vga_memory1"
- 66. Port Connectivity Checks: "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0"
- 67. Port Connectivity Checks: "vga_frame_driver:my_frame_driver"
- 68. Port Connectivity Checks: "debounce_switches:db"
- 69. Post-Synthesis Netlist Statistics for Top Partition
- 70. Elapsed Time Per Partition
- 71. Analysis & Synthesis Messages
- 72. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |vga_driver_to_frame_buf|S
+ 10. State Machine - |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|wr_id
+ 11. State Machine - |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|S
+ 12. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db19|S
+ 13. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db18|S
+ 14. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db17|S
+ 15. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db16|S
+ 16. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db15|S
+ 17. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db14|S
+ 18. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db13|S
+ 19. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db12|S
+ 20. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db11|S
+ 21. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db10|S
+ 22. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db7|S
+ 23. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db6|S
+ 24. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db5|S
+ 25. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db4|S
+ 26. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db3|S
+ 27. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db2|S
+ 28. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db1|S
+ 29. State Machine - |vga_driver_to_frame_buf|debounce_switches:db|debounce:db0|S
+ 30. Registers Removed During Synthesis
+ 31. Removed Registers Triggering Further Register Optimizations
+ 32. General Register Statistics
+ 33. Inverted Register Statistics
+ 34. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 35. Source assignments for vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated
+ 36. Source assignments for vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated
+ 37. Source assignments for vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated
+ 38. Parameter Settings for User Entity Instance: Top-level Entity: |vga_driver_to_frame_buf
+ 39. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db0
+ 40. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db1
+ 41. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db2
+ 42. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db3
+ 43. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db4
+ 44. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db5
+ 45. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db6
+ 46. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db7
+ 47. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db10
+ 48. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db11
+ 49. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db12
+ 50. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db13
+ 51. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db14
+ 52. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db15
+ 53. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db16
+ 54. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db17
+ 55. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db18
+ 56. Parameter Settings for User Entity Instance: debounce_switches:db|debounce:db19
+ 57. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver
+ 58. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component
+ 59. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component
+ 60. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component
+ 61. Parameter Settings for User Entity Instance: vga_frame_driver:my_frame_driver|vga_driver:the_vga
+ 62. altsyncram Parameter Settings by Entity Instance
+ 63. Port Connectivity Checks: "ps2:my_keyboard"
+ 64. Port Connectivity Checks: "btankmap:sprite"
+ 65. Port Connectivity Checks: "vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame"
+ 66. Port Connectivity Checks: "vga_frame_driver:my_frame_driver|vga_frame:vga_memory1"
+ 67. Port Connectivity Checks: "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0"
+ 68. Port Connectivity Checks: "vga_frame_driver:my_frame_driver"
+ 69. Port Connectivity Checks: "debounce_switches:db"
+ 70. Post-Synthesis Netlist Statistics for Top Partition
+ 71. Elapsed Time Per Partition
+ 72. Analysis & Synthesis Messages
+ 73. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -104,14 +105,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 15 00:08:18 2026          ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 19 11:55:50 2026          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; vga_driver_to_frame_buf                        ;
 ; Top-level Entity Name           ; vga_driver_to_frame_buf                        ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 198                                            ;
-; Total pins                      ; 82                                             ;
+; Total registers                 ; 269                                            ;
+; Total pins                      ; 84                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 2,359,296                                      ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -237,12 +238,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                    ; Library ;
 +----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------+---------+
+; desert.mif                       ; yes             ; User Memory Initialization File  ; M:/ece_287/tanksProject/desert.mif                                              ;         ;
+; verificare.v                     ; yes             ; User Verilog HDL File            ; M:/ece_287/tanksProject/verificare.v                                            ;         ;
+; SIPO.v                           ; yes             ; User Verilog HDL File            ; M:/ece_287/tanksProject/SIPO.v                                                  ;         ;
+; ps2.v                            ; yes             ; User Verilog HDL File            ; M:/ece_287/tanksProject/ps2.v                                                   ;         ;
+; latch_D_ck.v                     ; yes             ; User Verilog HDL File            ; M:/ece_287/tanksProject/latch_D_ck.v                                            ;         ;
 ; vga_frame_driver.v               ; yes             ; User Verilog HDL File            ; M:/ece_287/tanksProject/vga_frame_driver.v                                      ;         ;
 ; vga_frame.v                      ; yes             ; User Wizard-Generated File       ; M:/ece_287/tanksProject/vga_frame.v                                             ;         ;
 ; debounce.v                       ; yes             ; User Verilog HDL File            ; M:/ece_287/tanksProject/debounce.v                                              ;         ;
 ; vga_driver_to_frame_buf.v        ; yes             ; User Verilog HDL File            ; M:/ece_287/tanksProject/vga_driver_to_frame_buf.v                               ;         ;
 ; vga_driver.v                     ; yes             ; User Verilog HDL File            ; M:/ece_287/tanksProject/vga_driver.v                                            ;         ;
-; image.mif                        ; yes             ; User Memory Initialization File  ; M:/ece_287/tanksProject/image.mif                                               ;         ;
+; btankmap.v                       ; yes             ; User Verilog HDL File            ; M:/ece_287/tanksProject/btankmap.v                                              ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -252,7 +258,7 @@ https://fpgasoftware.intel.com/eula.
 ; altrom.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_1go1.tdf           ; yes             ; Auto-Generated Megafunction      ; M:/ece_287/tanksProject/db/altsyncram_1go1.tdf                                  ;         ;
+; db/altsyncram_5ko1.tdf           ; yes             ; Auto-Generated Megafunction      ; M:/ece_287/tanksProject/db/altsyncram_5ko1.tdf                                  ;         ;
 ; db/decode_8la.tdf                ; yes             ; Auto-Generated Megafunction      ; M:/ece_287/tanksProject/db/decode_8la.tdf                                       ;         ;
 ; db/decode_11a.tdf                ; yes             ; Auto-Generated Megafunction      ; M:/ece_287/tanksProject/db/decode_11a.tdf                                       ;         ;
 ; db/mux_6hb.tdf                   ; yes             ; Auto-Generated Megafunction      ; M:/ece_287/tanksProject/db/mux_6hb.tdf                                          ;         ;
@@ -264,27 +270,27 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 377            ;
+; Estimate of Logic utilization (ALMs needed) ; 440            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 625            ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 120            ;
-;     -- 5 input functions                    ; 63             ;
-;     -- 4 input functions                    ; 42             ;
-;     -- <=3 input functions                  ; 400            ;
+; Combinational ALUT usage for logic          ; 749            ;
+;     -- 7 input functions                    ; 8              ;
+;     -- 6 input functions                    ; 110            ;
+;     -- 5 input functions                    ; 107            ;
+;     -- 4 input functions                    ; 51             ;
+;     -- <=3 input functions                  ; 473            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 198            ;
+; Dedicated logic registers                   ; 269            ;
 ;                                             ;                ;
-; I/O pins                                    ; 82             ;
+; I/O pins                                    ; 84             ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 2359296        ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 486            ;
-; Total fan-out                               ; 7972           ;
-; Average fan-out                             ; 6.25           ;
+; Maximum fan-out                             ; 557            ;
+; Total fan-out                               ; 8740           ;
+; Average fan-out                             ; 5.92           ;
 +---------------------------------------------+----------------+
 
 
@@ -293,70 +299,60 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                          ; Entity Name             ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |vga_driver_to_frame_buf                     ; 625 (334)           ; 198 (109)                 ; 2359296           ; 0          ; 82   ; 0            ; |vga_driver_to_frame_buf                                                                                                                                                     ; vga_driver_to_frame_buf ; work         ;
-;    |vga_frame_driver:my_frame_driver|        ; 291 (206)           ; 89 (62)                   ; 2359296           ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver                                                                                                                    ; vga_frame_driver        ; work         ;
+; |vga_driver_to_frame_buf                     ; 749 (388)           ; 269 (135)                 ; 2359296           ; 0          ; 84   ; 0            ; |vga_driver_to_frame_buf                                                                                                                                                     ; vga_driver_to_frame_buf ; work         ;
+;    |btankmap:sprite|                         ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|btankmap:sprite                                                                                                                                     ; btankmap                ; work         ;
+;    |ps2:my_keyboard|                         ; 36 (2)              ; 45 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|ps2:my_keyboard                                                                                                                                     ; ps2                     ; work         ;
+;       |SIPO:register|                        ; 32 (32)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|ps2:my_keyboard|SIPO:register                                                                                                                       ; SIPO                    ; work         ;
+;       |latch_D_ck:lceas|                     ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|ps2:my_keyboard|latch_D_ck:lceas                                                                                                                    ; latch_D_ck              ; work         ;
+;       |latch_D_ck:ldate|                     ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|ps2:my_keyboard|latch_D_ck:ldate                                                                                                                    ; latch_D_ck              ; work         ;
+;       |latch_D_ck:out|                       ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|ps2:my_keyboard|latch_D_ck:out                                                                                                                      ; latch_D_ck              ; work         ;
+;       |verificare:ver|                       ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|ps2:my_keyboard|verificare:ver                                                                                                                      ; verificare              ; work         ;
+;    |vga_frame_driver:my_frame_driver|        ; 295 (210)           ; 89 (62)                   ; 2359296           ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver                                                                                                                    ; vga_frame_driver        ; work         ;
 ;       |vga_driver:the_vga|                   ; 37 (37)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_driver:the_vga                                                                                                 ; vga_driver              ; work         ;
 ;       |vga_frame:the_vga_draw_frame|         ; 32 (0)              ; 2 (0)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame                                                                                       ; vga_frame               ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 32 (0)              ; 2 (0)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component                                                       ; altsyncram              ; work         ;
-;             |altsyncram_1go1:auto_generated| ; 32 (0)              ; 2 (2)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated                        ; altsyncram_1go1         ; work         ;
-;                |decode_11a:rden_decode|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|decode_11a:rden_decode ; decode_11a              ; work         ;
-;                |decode_8la:decode3|          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|decode_8la:decode3     ; decode_8la              ; work         ;
-;                |mux_6hb:mux2|                ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|mux_6hb:mux2           ; mux_6hb                 ; work         ;
+;             |altsyncram_5ko1:auto_generated| ; 32 (0)              ; 2 (2)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated                        ; altsyncram_5ko1         ; work         ;
+;                |decode_11a:rden_decode|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|decode_11a:rden_decode ; decode_11a              ; work         ;
+;                |decode_8la:decode3|          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|decode_8la:decode3     ; decode_8la              ; work         ;
+;                |mux_6hb:mux2|                ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|mux_6hb:mux2           ; mux_6hb                 ; work         ;
 ;       |vga_frame:vga_memory0|                ; 8 (0)               ; 2 (0)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory0                                                                                              ; vga_frame               ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 8 (0)               ; 2 (0)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component                                                              ; altsyncram              ; work         ;
-;             |altsyncram_1go1:auto_generated| ; 8 (0)               ; 2 (2)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated                               ; altsyncram_1go1         ; work         ;
-;                |decode_11a:rden_decode|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|decode_11a:rden_decode        ; decode_11a              ; work         ;
-;                |decode_8la:decode3|          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|decode_8la:decode3            ; decode_8la              ; work         ;
+;             |altsyncram_5ko1:auto_generated| ; 8 (0)               ; 2 (2)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated                               ; altsyncram_5ko1         ; work         ;
+;                |decode_11a:rden_decode|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|decode_11a:rden_decode        ; decode_11a              ; work         ;
+;                |decode_8la:decode3|          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|decode_8la:decode3            ; decode_8la              ; work         ;
 ;       |vga_frame:vga_memory1|                ; 8 (0)               ; 2 (0)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory1                                                                                              ; vga_frame               ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 8 (0)               ; 2 (0)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component                                                              ; altsyncram              ; work         ;
-;             |altsyncram_1go1:auto_generated| ; 8 (0)               ; 2 (2)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated                               ; altsyncram_1go1         ; work         ;
-;                |decode_11a:rden_decode|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|decode_11a:rden_decode        ; decode_11a              ; work         ;
-;                |decode_8la:decode3|          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|decode_8la:decode3            ; decode_8la              ; work         ;
+;             |altsyncram_5ko1:auto_generated| ; 8 (0)               ; 2 (2)                     ; 786432            ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated                               ; altsyncram_5ko1         ; work         ;
+;                |decode_11a:rden_decode|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|decode_11a:rden_decode        ; decode_11a              ; work         ;
+;                |decode_8la:decode3|          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|decode_8la:decode3            ; decode_8la              ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                              ;
-+-----------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+-----------+
-; Name                                                                                                                                    ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF       ;
-+-----------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+-----------+
-; vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 32768        ; 24           ; --           ; --           ; 786432 ; image.mif ;
-; vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|ALTSYNCRAM        ; AUTO ; Single Port ; 32768        ; 24           ; --           ; --           ; 786432 ; image.mif ;
-; vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|ALTSYNCRAM        ; AUTO ; Single Port ; 32768        ; 24           ; --           ; --           ; 786432 ; image.mif ;
-+-----------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+-----------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                               ;
++-----------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+------------+
+; Name                                                                                                                                    ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF        ;
++-----------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+------------+
+; vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 32768        ; 24           ; --           ; --           ; 786432 ; desert.mif ;
+; vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|ALTSYNCRAM        ; AUTO ; Single Port ; 32768        ; 24           ; --           ; --           ; 786432 ; desert.mif ;
+; vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|ALTSYNCRAM        ; AUTO ; Single Port ; 32768        ; 24           ; --           ; --           ; 786432 ; desert.mif ;
++-----------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+------------+
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------+
-; State Machine - |vga_driver_to_frame_buf|direction                                      ;
-+-----------------+-----------------+-----------------+-----------------+-----------------+
-; Name            ; direction.00011 ; direction.00010 ; direction.00001 ; direction.00000 ;
-+-----------------+-----------------+-----------------+-----------------+-----------------+
-; direction.00000 ; 0               ; 0               ; 0               ; 0               ;
-; direction.00001 ; 0               ; 0               ; 1               ; 1               ;
-; direction.00010 ; 0               ; 1               ; 0               ; 1               ;
-; direction.00011 ; 1               ; 0               ; 0               ; 1               ;
-+-----------------+-----------------+-----------------+-----------------+-----------------+
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------+
-; State Machine - |vga_driver_to_frame_buf|S                                                                     ;
-+-----------+--------+-----------+---------+---------+---------+---------+--------+--------+-----------+---------+
-; Name      ; S.INIT ; S.CLEANUP ; S.WAITR ; S.WAITL ; S.WAITU ; S.WAITD ; S.DRAW ; S.MOVE ; S.KEY_SEL ; S.RESET ;
-+-----------+--------+-----------+---------+---------+---------+---------+--------+--------+-----------+---------+
-; S.RESET   ; 0      ; 0         ; 0       ; 0       ; 0       ; 0       ; 0      ; 0      ; 0         ; 0       ;
-; S.KEY_SEL ; 0      ; 0         ; 0       ; 0       ; 0       ; 0       ; 0      ; 0      ; 1         ; 1       ;
-; S.MOVE    ; 0      ; 0         ; 0       ; 0       ; 0       ; 0       ; 0      ; 1      ; 0         ; 1       ;
-; S.DRAW    ; 0      ; 0         ; 0       ; 0       ; 0       ; 0       ; 1      ; 0      ; 0         ; 1       ;
-; S.WAITD   ; 0      ; 0         ; 0       ; 0       ; 0       ; 1       ; 0      ; 0      ; 0         ; 1       ;
-; S.WAITU   ; 0      ; 0         ; 0       ; 0       ; 1       ; 0       ; 0      ; 0      ; 0         ; 1       ;
-; S.WAITL   ; 0      ; 0         ; 0       ; 1       ; 0       ; 0       ; 0      ; 0      ; 0         ; 1       ;
-; S.WAITR   ; 0      ; 0         ; 1       ; 0       ; 0       ; 0       ; 0      ; 0      ; 0         ; 1       ;
-; S.CLEANUP ; 0      ; 1         ; 0       ; 0       ; 0       ; 0       ; 0      ; 0      ; 0         ; 1       ;
-; S.INIT    ; 1      ; 0         ; 0       ; 0       ; 0       ; 0       ; 0      ; 0      ; 0         ; 1       ;
-+-----------+--------+-----------+---------+---------+---------+---------+--------+--------+-----------+---------+
++------------------------------------------------------------------------+
+; State Machine - |vga_driver_to_frame_buf|S                             ;
++-----------+--------+-----------+--------+--------+-----------+---------+
+; Name      ; S.INIT ; S.CLEANUP ; S.DRAW ; S.MOVE ; S.KEY_SEL ; S.RESET ;
++-----------+--------+-----------+--------+--------+-----------+---------+
+; S.RESET   ; 0      ; 0         ; 0      ; 0      ; 0         ; 0       ;
+; S.KEY_SEL ; 0      ; 0         ; 0      ; 0      ; 1         ; 1       ;
+; S.MOVE    ; 0      ; 0         ; 0      ; 1      ; 0         ; 1       ;
+; S.DRAW    ; 0      ; 0         ; 1      ; 0      ; 0         ; 1       ;
+; S.CLEANUP ; 0      ; 1         ; 0      ; 0      ; 0         ; 1       ;
+; S.INIT    ; 1      ; 0         ; 0      ; 0      ; 0         ; 1       ;
++-----------+--------+-----------+--------+--------+-----------+---------+
 
 
 Encoding Type:  One-Hot
@@ -656,308 +652,315 @@ Encoding Type:  One-Hot
 +--------------+---------+--------------+--------+-------------+-------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                         ;
-+--------------------------------------------------------+---------------------------------------------------+
-; Register name                                          ; Reason for Removal                                ;
-+--------------------------------------------------------+---------------------------------------------------+
-; the_vga_draw_frame_write_mem_data[1,2,7,11,14,17,22]   ; Merged with the_vga_draw_frame_write_mem_data[0]  ;
-; the_vga_draw_frame_write_mem_data[3,15,16,18,20,21,23] ; Merged with the_vga_draw_frame_write_mem_data[12] ;
-; the_vga_draw_frame_write_mem_data[4..6,9]              ; Merged with the_vga_draw_frame_write_mem_data[19] ;
-; the_vga_draw_frame_write_mem_data[8,13]                ; Merged with the_vga_draw_frame_write_mem_data[10] ;
-; the_vga_draw_frame_write_mem_data[10]                  ; Stuck at GND due to stuck port data_in            ;
-; debounce_switches:db|debounce:db19|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db19|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db19|S.ZERO              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|S.ZERO              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|S.ZERO              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|S.ZERO              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|S.ZERO              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|S.ZERO              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|S.ZERO              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|S.ZERO              ; Lost fanout                                       ;
-; direction~6                                            ; Lost fanout                                       ;
-; direction~7                                            ; Lost fanout                                       ;
-; direction~8                                            ; Lost fanout                                       ;
-; direction~9                                            ; Lost fanout                                       ;
-; direction~10                                           ; Lost fanout                                       ;
-; S~4                                                    ; Lost fanout                                       ;
-; S~5                                                    ; Lost fanout                                       ;
-; S~6                                                    ; Lost fanout                                       ;
-; S~7                                                    ; Lost fanout                                       ;
-; S~8                                                    ; Lost fanout                                       ;
-; S~9                                                    ; Lost fanout                                       ;
-; S~10                                                   ; Lost fanout                                       ;
-; S~11                                                   ; Lost fanout                                       ;
-; vga_frame_driver:my_frame_driver|S~4                   ; Lost fanout                                       ;
-; vga_frame_driver:my_frame_driver|S~5                   ; Lost fanout                                       ;
-; vga_frame_driver:my_frame_driver|S~8                   ; Lost fanout                                       ;
-; vga_frame_driver:my_frame_driver|S~9                   ; Lost fanout                                       ;
-; vga_frame_driver:my_frame_driver|S~10                  ; Lost fanout                                       ;
-; vga_frame_driver:my_frame_driver|S~11                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db19|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db19|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db19|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|S~4                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|S~5                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|S~6                 ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|S~4                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|S~5                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|S~6                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|S~4                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|S~5                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|S~6                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|S~4                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|S~5                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|S~6                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|S~4                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|S~5                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|S~6                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|S~4                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|S~5                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|S~6                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|S~4                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|S~5                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|S~6                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|S~4                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|S~5                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|S~6                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|S~4                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|S~5                  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|S~6                  ; Lost fanout                                       ;
-; S.INIT                                                 ; Stuck at GND due to stuck port data_in            ;
-; debounce_switches:db|debounce:db19|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|count[0..7]         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|count[0..7]          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|count[0..7]          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|count[0..7]          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|count[0..7]          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|count[0..7]          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|count[0..7]          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|count[0..7]          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|count[0..7]          ; Lost fanout                                       ;
-; vga_frame_driver:my_frame_driver|wr_id.MEM_INIT_WRITE  ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db19|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db19|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db19|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db18|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db17|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db16|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db15|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db14|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db13|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db12|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|S.ZERO              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db11|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|S.START             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|S.ONE               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|S.MAYBE_ONE         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|S.ZERO              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|S.MAYBE_ZERO        ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db10|S.ERROR             ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|S.START              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|S.ONE                ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|S.MAYBE_ONE          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|S.ZERO               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|S.MAYBE_ZERO         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db7|S.ERROR              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|S.START              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|S.ONE                ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|S.MAYBE_ONE          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|S.ZERO               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|S.MAYBE_ZERO         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db6|S.ERROR              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|S.START              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|S.ONE                ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|S.MAYBE_ONE          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|S.ZERO               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|S.MAYBE_ZERO         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db5|S.ERROR              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|S.START              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|S.ONE                ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|S.MAYBE_ONE          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|S.ZERO               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|S.MAYBE_ZERO         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db4|S.ERROR              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|S.START              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|S.ONE                ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|S.MAYBE_ONE          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|S.ZERO               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|S.MAYBE_ZERO         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db3|S.ERROR              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|S.START              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|S.ONE                ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|S.MAYBE_ONE          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|S.ZERO               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|S.MAYBE_ZERO         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db2|S.ERROR              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|S.START              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|S.ONE                ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|S.MAYBE_ONE          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|S.ZERO               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|S.MAYBE_ZERO         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db1|S.ERROR              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|S.START              ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|S.ONE                ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|S.MAYBE_ONE          ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|S.ZERO               ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|S.MAYBE_ZERO         ; Lost fanout                                       ;
-; debounce_switches:db|debounce:db0|S.ERROR              ; Lost fanout                                       ;
-; vga_frame_driver:my_frame_driver|S.ERROR               ; Stuck at GND due to stuck port data_in            ;
-; Total Number of Removed Registers = 349                ;                                                   ;
-+--------------------------------------------------------+---------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++-------------------------------------------------------+---------------------------------------------------+
+; Register name                                         ; Reason for Removal                                ;
++-------------------------------------------------------+---------------------------------------------------+
+; direction[3,4]                                        ; Merged with direction[2]                          ;
+; boxv[1]                                               ; Merged with boxh[0]                               ;
+; boxv[0]                                               ; Merged with boxh[1]                               ;
+; boxh[4..9]                                            ; Merged with boxh[2]                               ;
+; boxv[2,4..9]                                          ; Merged with boxh[2]                               ;
+; boxv[3]                                               ; Merged with boxh[3]                               ;
+; the_vga_draw_frame_write_mem_data[1,2,11,14,17,22]    ; Merged with the_vga_draw_frame_write_mem_data[0]  ;
+; the_vga_draw_frame_write_mem_data[3,16,18,20,21,23]   ; Merged with the_vga_draw_frame_write_mem_data[12] ;
+; the_vga_draw_frame_write_mem_data[4]                  ; Merged with the_vga_draw_frame_write_mem_data[19] ;
+; the_vga_draw_frame_write_mem_data[6,9]                ; Merged with the_vga_draw_frame_write_mem_data[5]  ;
+; the_vga_draw_frame_write_mem_data[8]                  ; Merged with the_vga_draw_frame_write_mem_data[10] ;
+; direction[2]                                          ; Stuck at GND due to stuck port data_in            ;
+; boxh[2]                                               ; Stuck at GND due to stuck port data_in            ;
+; the_vga_draw_frame_write_mem_data[10]                 ; Stuck at GND due to stuck port data_in            ;
+; boxh[3]                                               ; Stuck at VCC due to stuck port data_in            ;
+; debounce_switches:db|debounce:db19|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db19|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db19|S.ZERO             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|S.ZERO             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|S.ZERO             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|S.ZERO             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|S.ZERO             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|S.ZERO             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|S.ZERO             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|S.ZERO             ; Lost fanout                                       ;
+; S~4                                                   ; Lost fanout                                       ;
+; S~5                                                   ; Lost fanout                                       ;
+; S~6                                                   ; Lost fanout                                       ;
+; S~7                                                   ; Lost fanout                                       ;
+; S~8                                                   ; Lost fanout                                       ;
+; S~9                                                   ; Lost fanout                                       ;
+; S~10                                                  ; Lost fanout                                       ;
+; S~11                                                  ; Lost fanout                                       ;
+; vga_frame_driver:my_frame_driver|S~4                  ; Lost fanout                                       ;
+; vga_frame_driver:my_frame_driver|S~5                  ; Lost fanout                                       ;
+; vga_frame_driver:my_frame_driver|S~8                  ; Lost fanout                                       ;
+; vga_frame_driver:my_frame_driver|S~9                  ; Lost fanout                                       ;
+; vga_frame_driver:my_frame_driver|S~10                 ; Lost fanout                                       ;
+; vga_frame_driver:my_frame_driver|S~11                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db19|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db19|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db19|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|S~4                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|S~5                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|S~6                ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|S~4                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|S~5                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|S~6                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|S~4                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|S~5                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|S~6                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|S~4                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|S~5                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|S~6                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|S~4                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|S~5                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|S~6                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|S~4                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|S~5                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|S~6                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|S~4                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|S~5                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|S~6                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|S~4                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|S~5                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|S~6                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|S~4                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|S~5                 ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|S~6                 ; Lost fanout                                       ;
+; S.INIT                                                ; Stuck at GND due to stuck port data_in            ;
+; debounce_switches:db|debounce:db19|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|count[0..7]        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|count[0..7]         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|count[0..7]         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|count[0..7]         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|count[0..7]         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|count[0..7]         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|count[0..7]         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|count[0..7]         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|count[0..7]         ; Lost fanout                                       ;
+; vga_frame_driver:my_frame_driver|wr_id.MEM_INIT_WRITE ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db19|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db19|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db19|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db18|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db17|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db16|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db15|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db14|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db13|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db12|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|S.ZERO             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db11|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|S.START            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|S.ONE              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|S.MAYBE_ONE        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|S.ZERO             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|S.MAYBE_ZERO       ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db10|S.ERROR            ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|S.START             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|S.ONE               ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|S.MAYBE_ONE         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|S.ZERO              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|S.MAYBE_ZERO        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db7|S.ERROR             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|S.START             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|S.ONE               ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|S.MAYBE_ONE         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|S.ZERO              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|S.MAYBE_ZERO        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db6|S.ERROR             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|S.START             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|S.ONE               ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|S.MAYBE_ONE         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|S.ZERO              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|S.MAYBE_ZERO        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db5|S.ERROR             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|S.START             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|S.ONE               ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|S.MAYBE_ONE         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|S.ZERO              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|S.MAYBE_ZERO        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db4|S.ERROR             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|S.START             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|S.ONE               ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|S.MAYBE_ONE         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|S.ZERO              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|S.MAYBE_ZERO        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db3|S.ERROR             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|S.START             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|S.ONE               ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|S.MAYBE_ONE         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|S.ZERO              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|S.MAYBE_ZERO        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db2|S.ERROR             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|S.START             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|S.ONE               ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|S.MAYBE_ONE         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|S.ZERO              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|S.MAYBE_ZERO        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db1|S.ERROR             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|S.START             ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|S.ONE               ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|S.MAYBE_ONE         ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|S.ZERO              ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|S.MAYBE_ZERO        ; Lost fanout                                       ;
+; debounce_switches:db|debounce:db0|S.ERROR             ; Lost fanout                                       ;
+; vga_frame_driver:my_frame_driver|S.ERROR              ; Stuck at GND due to stuck port data_in            ;
+; Total Number of Removed Registers = 361               ;                                                   ;
++-------------------------------------------------------+---------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                         ;
-+---------------------------------------------+--------------------+--------------------------------------------------+
-; Register name                               ; Reason for Removal ; Registers Removed due to This Register           ;
-+---------------------------------------------+--------------------+--------------------------------------------------+
-; debounce_switches:db|debounce:db19|S.ZERO   ; Lost Fanouts       ; debounce_switches:db|debounce:db19|S.ONE,        ;
-;                                             ;                    ; debounce_switches:db|debounce:db19|S.MAYBE_ZERO, ;
-;                                             ;                    ; debounce_switches:db|debounce:db19|S.ERROR       ;
-; debounce_switches:db|debounce:db18|S.ZERO   ; Lost Fanouts       ; debounce_switches:db|debounce:db18|S.ONE,        ;
-;                                             ;                    ; debounce_switches:db|debounce:db18|S.MAYBE_ZERO, ;
-;                                             ;                    ; debounce_switches:db|debounce:db18|S.ERROR       ;
-; debounce_switches:db|debounce:db17|S.ZERO   ; Lost Fanouts       ; debounce_switches:db|debounce:db17|S.ONE,        ;
-;                                             ;                    ; debounce_switches:db|debounce:db17|S.MAYBE_ZERO, ;
-;                                             ;                    ; debounce_switches:db|debounce:db17|S.ERROR       ;
-; debounce_switches:db|debounce:db16|S.ZERO   ; Lost Fanouts       ; debounce_switches:db|debounce:db16|S.ONE,        ;
-;                                             ;                    ; debounce_switches:db|debounce:db16|S.MAYBE_ZERO, ;
-;                                             ;                    ; debounce_switches:db|debounce:db16|S.ERROR       ;
-; debounce_switches:db|debounce:db15|S.ZERO   ; Lost Fanouts       ; debounce_switches:db|debounce:db15|S.ONE,        ;
-;                                             ;                    ; debounce_switches:db|debounce:db15|S.MAYBE_ZERO, ;
-;                                             ;                    ; debounce_switches:db|debounce:db15|S.ERROR       ;
-; debounce_switches:db|debounce:db14|S.ZERO   ; Lost Fanouts       ; debounce_switches:db|debounce:db14|S.ONE,        ;
-;                                             ;                    ; debounce_switches:db|debounce:db14|S.MAYBE_ZERO, ;
-;                                             ;                    ; debounce_switches:db|debounce:db14|S.ERROR       ;
-; debounce_switches:db|debounce:db13|S.ZERO   ; Lost Fanouts       ; debounce_switches:db|debounce:db13|S.ONE,        ;
-;                                             ;                    ; debounce_switches:db|debounce:db13|S.MAYBE_ZERO, ;
-;                                             ;                    ; debounce_switches:db|debounce:db13|S.ERROR       ;
-; debounce_switches:db|debounce:db12|S.ZERO   ; Lost Fanouts       ; debounce_switches:db|debounce:db12|S.ONE,        ;
-;                                             ;                    ; debounce_switches:db|debounce:db12|S.MAYBE_ZERO, ;
-;                                             ;                    ; debounce_switches:db|debounce:db12|S.ERROR       ;
-; debounce_switches:db|debounce:db19|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db19|count[6],     ;
-;                                             ;                    ; debounce_switches:db|debounce:db19|count[7]      ;
-; debounce_switches:db|debounce:db18|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db18|count[6],     ;
-;                                             ;                    ; debounce_switches:db|debounce:db18|count[7]      ;
-; debounce_switches:db|debounce:db17|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db17|count[6],     ;
-;                                             ;                    ; debounce_switches:db|debounce:db17|count[7]      ;
-; debounce_switches:db|debounce:db16|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db16|count[6],     ;
-;                                             ;                    ; debounce_switches:db|debounce:db16|count[7]      ;
-; debounce_switches:db|debounce:db15|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db15|count[6],     ;
-;                                             ;                    ; debounce_switches:db|debounce:db15|count[7]      ;
-; debounce_switches:db|debounce:db14|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db14|count[6],     ;
-;                                             ;                    ; debounce_switches:db|debounce:db14|count[7]      ;
-; debounce_switches:db|debounce:db13|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db13|count[6],     ;
-;                                             ;                    ; debounce_switches:db|debounce:db13|count[7]      ;
-; debounce_switches:db|debounce:db12|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db12|count[6],     ;
-;                                             ;                    ; debounce_switches:db|debounce:db12|count[7]      ;
-; debounce_switches:db|debounce:db11|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db11|S.ERROR       ;
-; debounce_switches:db|debounce:db11|S~5      ; Lost Fanouts       ; debounce_switches:db|debounce:db11|S.ZERO        ;
-; debounce_switches:db|debounce:db11|S~6      ; Lost Fanouts       ; debounce_switches:db|debounce:db11|S.ONE         ;
-; debounce_switches:db|debounce:db10|S~4      ; Lost Fanouts       ; debounce_switches:db|debounce:db10|S.ERROR       ;
-; debounce_switches:db|debounce:db10|S~5      ; Lost Fanouts       ; debounce_switches:db|debounce:db10|S.ZERO        ;
-; debounce_switches:db|debounce:db10|S~6      ; Lost Fanouts       ; debounce_switches:db|debounce:db10|S.ONE         ;
-; debounce_switches:db|debounce:db7|S~4       ; Lost Fanouts       ; debounce_switches:db|debounce:db7|S.ERROR        ;
-; debounce_switches:db|debounce:db7|S~5       ; Lost Fanouts       ; debounce_switches:db|debounce:db7|S.ZERO         ;
-; debounce_switches:db|debounce:db7|S~6       ; Lost Fanouts       ; debounce_switches:db|debounce:db7|S.ONE          ;
-; debounce_switches:db|debounce:db6|S~4       ; Lost Fanouts       ; debounce_switches:db|debounce:db6|S.ERROR        ;
-; debounce_switches:db|debounce:db6|S~5       ; Lost Fanouts       ; debounce_switches:db|debounce:db6|S.ZERO         ;
-; debounce_switches:db|debounce:db6|S~6       ; Lost Fanouts       ; debounce_switches:db|debounce:db6|S.ONE          ;
-; debounce_switches:db|debounce:db5|S~4       ; Lost Fanouts       ; debounce_switches:db|debounce:db5|S.ERROR        ;
-; debounce_switches:db|debounce:db5|S~5       ; Lost Fanouts       ; debounce_switches:db|debounce:db5|S.ZERO         ;
-; debounce_switches:db|debounce:db5|S~6       ; Lost Fanouts       ; debounce_switches:db|debounce:db5|S.ONE          ;
-; debounce_switches:db|debounce:db4|S~4       ; Lost Fanouts       ; debounce_switches:db|debounce:db4|S.ERROR        ;
-; debounce_switches:db|debounce:db4|S~5       ; Lost Fanouts       ; debounce_switches:db|debounce:db4|S.ZERO         ;
-; debounce_switches:db|debounce:db4|S~6       ; Lost Fanouts       ; debounce_switches:db|debounce:db4|S.ONE          ;
-; debounce_switches:db|debounce:db3|S~4       ; Lost Fanouts       ; debounce_switches:db|debounce:db3|S.ERROR        ;
-; debounce_switches:db|debounce:db3|S~5       ; Lost Fanouts       ; debounce_switches:db|debounce:db3|S.ZERO         ;
-; debounce_switches:db|debounce:db3|S~6       ; Lost Fanouts       ; debounce_switches:db|debounce:db3|S.ONE          ;
-; debounce_switches:db|debounce:db2|S~4       ; Lost Fanouts       ; debounce_switches:db|debounce:db2|S.ERROR        ;
-; debounce_switches:db|debounce:db2|S~5       ; Lost Fanouts       ; debounce_switches:db|debounce:db2|S.ZERO         ;
-; debounce_switches:db|debounce:db2|S~6       ; Lost Fanouts       ; debounce_switches:db|debounce:db2|S.ONE          ;
-; debounce_switches:db|debounce:db1|S~4       ; Lost Fanouts       ; debounce_switches:db|debounce:db1|S.ERROR        ;
-; debounce_switches:db|debounce:db1|S~5       ; Lost Fanouts       ; debounce_switches:db|debounce:db1|S.ZERO         ;
-; debounce_switches:db|debounce:db1|S~6       ; Lost Fanouts       ; debounce_switches:db|debounce:db1|S.ONE          ;
-; debounce_switches:db|debounce:db0|S~4       ; Lost Fanouts       ; debounce_switches:db|debounce:db0|S.ERROR        ;
-; debounce_switches:db|debounce:db0|S~5       ; Lost Fanouts       ; debounce_switches:db|debounce:db0|S.ZERO         ;
-; debounce_switches:db|debounce:db0|S~6       ; Lost Fanouts       ; debounce_switches:db|debounce:db0|S.ONE          ;
-; debounce_switches:db|debounce:db11|count[0] ; Lost Fanouts       ; debounce_switches:db|debounce:db11|S.START       ;
-; debounce_switches:db|debounce:db10|count[0] ; Lost Fanouts       ; debounce_switches:db|debounce:db10|S.START       ;
-; debounce_switches:db|debounce:db7|count[1]  ; Lost Fanouts       ; debounce_switches:db|debounce:db7|S.START        ;
-; debounce_switches:db|debounce:db6|count[1]  ; Lost Fanouts       ; debounce_switches:db|debounce:db6|S.START        ;
-; debounce_switches:db|debounce:db5|count[1]  ; Lost Fanouts       ; debounce_switches:db|debounce:db5|S.START        ;
-; debounce_switches:db|debounce:db4|count[1]  ; Lost Fanouts       ; debounce_switches:db|debounce:db4|S.START        ;
-; debounce_switches:db|debounce:db3|count[1]  ; Lost Fanouts       ; debounce_switches:db|debounce:db3|S.START        ;
-; debounce_switches:db|debounce:db2|count[1]  ; Lost Fanouts       ; debounce_switches:db|debounce:db2|S.START        ;
-; debounce_switches:db|debounce:db1|count[1]  ; Lost Fanouts       ; debounce_switches:db|debounce:db1|S.START        ;
-; debounce_switches:db|debounce:db0|count[1]  ; Lost Fanouts       ; debounce_switches:db|debounce:db0|S.START        ;
-+---------------------------------------------+--------------------+--------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                ;
++---------------------------------------------+---------------------------+--------------------------------------------------+
+; Register name                               ; Reason for Removal        ; Registers Removed due to This Register           ;
++---------------------------------------------+---------------------------+--------------------------------------------------+
+; debounce_switches:db|debounce:db13|S.ZERO   ; Lost Fanouts              ; debounce_switches:db|debounce:db13|S.ONE,        ;
+;                                             ;                           ; debounce_switches:db|debounce:db13|S.MAYBE_ZERO, ;
+;                                             ;                           ; debounce_switches:db|debounce:db13|S.ERROR       ;
+; debounce_switches:db|debounce:db19|S.ZERO   ; Lost Fanouts              ; debounce_switches:db|debounce:db19|S.ONE,        ;
+;                                             ;                           ; debounce_switches:db|debounce:db19|S.MAYBE_ZERO, ;
+;                                             ;                           ; debounce_switches:db|debounce:db19|S.ERROR       ;
+; debounce_switches:db|debounce:db18|S.ZERO   ; Lost Fanouts              ; debounce_switches:db|debounce:db18|S.ONE,        ;
+;                                             ;                           ; debounce_switches:db|debounce:db18|S.MAYBE_ZERO, ;
+;                                             ;                           ; debounce_switches:db|debounce:db18|S.ERROR       ;
+; debounce_switches:db|debounce:db17|S.ZERO   ; Lost Fanouts              ; debounce_switches:db|debounce:db17|S.ONE,        ;
+;                                             ;                           ; debounce_switches:db|debounce:db17|S.MAYBE_ZERO, ;
+;                                             ;                           ; debounce_switches:db|debounce:db17|S.ERROR       ;
+; debounce_switches:db|debounce:db16|S.ZERO   ; Lost Fanouts              ; debounce_switches:db|debounce:db16|S.ONE,        ;
+;                                             ;                           ; debounce_switches:db|debounce:db16|S.MAYBE_ZERO, ;
+;                                             ;                           ; debounce_switches:db|debounce:db16|S.ERROR       ;
+; debounce_switches:db|debounce:db15|S.ZERO   ; Lost Fanouts              ; debounce_switches:db|debounce:db15|S.ONE,        ;
+;                                             ;                           ; debounce_switches:db|debounce:db15|S.MAYBE_ZERO, ;
+;                                             ;                           ; debounce_switches:db|debounce:db15|S.ERROR       ;
+; debounce_switches:db|debounce:db14|S.ZERO   ; Lost Fanouts              ; debounce_switches:db|debounce:db14|S.ONE,        ;
+;                                             ;                           ; debounce_switches:db|debounce:db14|S.MAYBE_ZERO, ;
+;                                             ;                           ; debounce_switches:db|debounce:db14|S.ERROR       ;
+; debounce_switches:db|debounce:db12|S.ZERO   ; Lost Fanouts              ; debounce_switches:db|debounce:db12|S.ONE,        ;
+;                                             ;                           ; debounce_switches:db|debounce:db12|S.MAYBE_ZERO, ;
+;                                             ;                           ; debounce_switches:db|debounce:db12|S.ERROR       ;
+; direction[2]                                ; Stuck at GND              ; boxh[2], boxh[3]                                 ;
+;                                             ; due to stuck port data_in ;                                                  ;
+; debounce_switches:db|debounce:db19|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db19|count[6],     ;
+;                                             ;                           ; debounce_switches:db|debounce:db19|count[7]      ;
+; debounce_switches:db|debounce:db18|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db18|count[6],     ;
+;                                             ;                           ; debounce_switches:db|debounce:db18|count[7]      ;
+; debounce_switches:db|debounce:db17|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db17|count[6],     ;
+;                                             ;                           ; debounce_switches:db|debounce:db17|count[7]      ;
+; debounce_switches:db|debounce:db16|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db16|count[6],     ;
+;                                             ;                           ; debounce_switches:db|debounce:db16|count[7]      ;
+; debounce_switches:db|debounce:db15|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db15|count[6],     ;
+;                                             ;                           ; debounce_switches:db|debounce:db15|count[7]      ;
+; debounce_switches:db|debounce:db14|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db14|count[6],     ;
+;                                             ;                           ; debounce_switches:db|debounce:db14|count[7]      ;
+; debounce_switches:db|debounce:db13|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db13|count[6],     ;
+;                                             ;                           ; debounce_switches:db|debounce:db13|count[7]      ;
+; debounce_switches:db|debounce:db12|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db12|count[6],     ;
+;                                             ;                           ; debounce_switches:db|debounce:db12|count[7]      ;
+; debounce_switches:db|debounce:db11|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db11|S.ERROR       ;
+; debounce_switches:db|debounce:db11|S~5      ; Lost Fanouts              ; debounce_switches:db|debounce:db11|S.ZERO        ;
+; debounce_switches:db|debounce:db11|S~6      ; Lost Fanouts              ; debounce_switches:db|debounce:db11|S.ONE         ;
+; debounce_switches:db|debounce:db10|S~4      ; Lost Fanouts              ; debounce_switches:db|debounce:db10|S.ERROR       ;
+; debounce_switches:db|debounce:db10|S~5      ; Lost Fanouts              ; debounce_switches:db|debounce:db10|S.ZERO        ;
+; debounce_switches:db|debounce:db10|S~6      ; Lost Fanouts              ; debounce_switches:db|debounce:db10|S.ONE         ;
+; debounce_switches:db|debounce:db7|S~4       ; Lost Fanouts              ; debounce_switches:db|debounce:db7|S.ERROR        ;
+; debounce_switches:db|debounce:db7|S~5       ; Lost Fanouts              ; debounce_switches:db|debounce:db7|S.ZERO         ;
+; debounce_switches:db|debounce:db7|S~6       ; Lost Fanouts              ; debounce_switches:db|debounce:db7|S.ONE          ;
+; debounce_switches:db|debounce:db6|S~4       ; Lost Fanouts              ; debounce_switches:db|debounce:db6|S.ERROR        ;
+; debounce_switches:db|debounce:db6|S~5       ; Lost Fanouts              ; debounce_switches:db|debounce:db6|S.ZERO         ;
+; debounce_switches:db|debounce:db6|S~6       ; Lost Fanouts              ; debounce_switches:db|debounce:db6|S.ONE          ;
+; debounce_switches:db|debounce:db5|S~4       ; Lost Fanouts              ; debounce_switches:db|debounce:db5|S.ERROR        ;
+; debounce_switches:db|debounce:db5|S~5       ; Lost Fanouts              ; debounce_switches:db|debounce:db5|S.ZERO         ;
+; debounce_switches:db|debounce:db5|S~6       ; Lost Fanouts              ; debounce_switches:db|debounce:db5|S.ONE          ;
+; debounce_switches:db|debounce:db4|S~4       ; Lost Fanouts              ; debounce_switches:db|debounce:db4|S.ERROR        ;
+; debounce_switches:db|debounce:db4|S~5       ; Lost Fanouts              ; debounce_switches:db|debounce:db4|S.ZERO         ;
+; debounce_switches:db|debounce:db4|S~6       ; Lost Fanouts              ; debounce_switches:db|debounce:db4|S.ONE          ;
+; debounce_switches:db|debounce:db3|S~4       ; Lost Fanouts              ; debounce_switches:db|debounce:db3|S.ERROR        ;
+; debounce_switches:db|debounce:db3|S~5       ; Lost Fanouts              ; debounce_switches:db|debounce:db3|S.ZERO         ;
+; debounce_switches:db|debounce:db3|S~6       ; Lost Fanouts              ; debounce_switches:db|debounce:db3|S.ONE          ;
+; debounce_switches:db|debounce:db2|S~4       ; Lost Fanouts              ; debounce_switches:db|debounce:db2|S.ERROR        ;
+; debounce_switches:db|debounce:db2|S~5       ; Lost Fanouts              ; debounce_switches:db|debounce:db2|S.ZERO         ;
+; debounce_switches:db|debounce:db2|S~6       ; Lost Fanouts              ; debounce_switches:db|debounce:db2|S.ONE          ;
+; debounce_switches:db|debounce:db1|S~4       ; Lost Fanouts              ; debounce_switches:db|debounce:db1|S.ERROR        ;
+; debounce_switches:db|debounce:db1|S~5       ; Lost Fanouts              ; debounce_switches:db|debounce:db1|S.ZERO         ;
+; debounce_switches:db|debounce:db1|S~6       ; Lost Fanouts              ; debounce_switches:db|debounce:db1|S.ONE          ;
+; debounce_switches:db|debounce:db0|S~4       ; Lost Fanouts              ; debounce_switches:db|debounce:db0|S.ERROR        ;
+; debounce_switches:db|debounce:db0|S~5       ; Lost Fanouts              ; debounce_switches:db|debounce:db0|S.ZERO         ;
+; debounce_switches:db|debounce:db0|S~6       ; Lost Fanouts              ; debounce_switches:db|debounce:db0|S.ONE          ;
+; debounce_switches:db|debounce:db11|count[1] ; Lost Fanouts              ; debounce_switches:db|debounce:db11|S.START       ;
+; debounce_switches:db|debounce:db10|count[0] ; Lost Fanouts              ; debounce_switches:db|debounce:db10|S.START       ;
+; debounce_switches:db|debounce:db7|count[1]  ; Lost Fanouts              ; debounce_switches:db|debounce:db7|S.START        ;
+; debounce_switches:db|debounce:db6|count[0]  ; Lost Fanouts              ; debounce_switches:db|debounce:db6|S.START        ;
+; debounce_switches:db|debounce:db5|count[1]  ; Lost Fanouts              ; debounce_switches:db|debounce:db5|S.START        ;
+; debounce_switches:db|debounce:db4|count[0]  ; Lost Fanouts              ; debounce_switches:db|debounce:db4|S.START        ;
+; debounce_switches:db|debounce:db3|count[1]  ; Lost Fanouts              ; debounce_switches:db|debounce:db3|S.START        ;
+; debounce_switches:db|debounce:db2|count[1]  ; Lost Fanouts              ; debounce_switches:db|debounce:db2|S.START        ;
+; debounce_switches:db|debounce:db1|count[0]  ; Lost Fanouts              ; debounce_switches:db|debounce:db1|S.START        ;
+; debounce_switches:db|debounce:db0|count[1]  ; Lost Fanouts              ; debounce_switches:db|debounce:db0|S.START        ;
++---------------------------------------------+---------------------------+--------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -965,29 +968,51 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 198   ;
-; Number of registers using Synchronous Clear  ; 64    ;
-; Number of registers using Synchronous Load   ; 31    ;
-; Number of registers using Asynchronous Clear ; 173   ;
+; Total registers                              ; 269   ;
+; Number of registers using Synchronous Clear  ; 80    ;
+; Number of registers using Synchronous Load   ; 57    ;
+; Number of registers using Asynchronous Clear ; 244   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 145   ;
+; Number of registers using Clock Enable       ; 194   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; blueY[2]                               ; 6       ;
-; blueY[5]                               ; 6       ;
-; blueY[4]                               ; 6       ;
-; blueY[3]                               ; 6       ;
-; blueX[0]                               ; 6       ;
-; blueX[2]                               ; 6       ;
-; Total number of inverted registers = 6 ;         ;
-+----------------------------------------+---------+
++------------------------------------------------------------+
+; Inverted Register Statistics                               ;
++--------------------------------------------------+---------+
+; Inverted Register                                ; Fan out ;
++--------------------------------------------------+---------+
+; ps2:my_keyboard|SIPO:register|s[1]               ; 9       ;
+; ps2:my_keyboard|SIPO:register|s[2]               ; 7       ;
+; ps2:my_keyboard|SIPO:register|s[3]               ; 7       ;
+; ps2:my_keyboard|SIPO:register|s[4]               ; 6       ;
+; ps2:my_keyboard|SIPO:register|s[5]               ; 6       ;
+; ps2:my_keyboard|SIPO:register|s[6]               ; 5       ;
+; ps2:my_keyboard|SIPO:register|s[7]               ; 5       ;
+; ps2:my_keyboard|SIPO:register|s[8]               ; 5       ;
+; ps2:my_keyboard|SIPO:register|clk_debounced      ; 3       ;
+; ps2:my_keyboard|SIPO:register|clk_debounced_prev ; 1       ;
+; ps2:my_keyboard|SIPO:register|s[9]               ; 2       ;
+; ps2:my_keyboard|SIPO:register|clk_filter[2]      ; 2       ;
+; ps2:my_keyboard|SIPO:register|clk_filter[1]      ; 2       ;
+; ps2:my_keyboard|SIPO:register|clk_filter[0]      ; 2       ;
+; ps2:my_keyboard|SIPO:register|clk_filter[7]      ; 2       ;
+; ps2:my_keyboard|SIPO:register|clk_filter[6]      ; 3       ;
+; ps2:my_keyboard|SIPO:register|clk_filter[5]      ; 3       ;
+; ps2:my_keyboard|SIPO:register|clk_filter[4]      ; 3       ;
+; ps2:my_keyboard|SIPO:register|clk_filter[3]      ; 3       ;
+; ps2:my_keyboard|SIPO:register|s[10]              ; 2       ;
+; ps2:my_keyboard|SIPO:register|s[0]               ; 1       ;
+; boxh[0]                                          ; 4       ;
+; blueY[2]                                         ; 6       ;
+; blueY[5]                                         ; 6       ;
+; blueY[4]                                         ; 6       ;
+; blueY[3]                                         ; 6       ;
+; blueX[0]                                         ; 6       ;
+; blueX[2]                                         ; 6       ;
+; Total number of inverted registers = 28          ;         ;
++--------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -995,46 +1020,48 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|read_buf_mem_address[4]                                                                                                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db19|count[1]                                                                                                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db18|count[6]                                                                                                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db17|count[4]                                                                                                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db16|count[2]                                                                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_driver_to_frame_buf|blue_dir_reg[2]                                                                                                                                                 ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|read_buf_mem_address[3]                                                                                                        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db19|count[3]                                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db18|count[4]                                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db17|count[3]                                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db16|count[6]                                                                                                                     ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db15|count[0]                                                                                                                     ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db14|count[5]                                                                                                                     ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db13|count[2]                                                                                                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db12|count[2]                                                                                                                     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db11|count[0]                                                                                                                     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db10|count[0]                                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db12|count[6]                                                                                                                     ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |vga_driver_to_frame_buf|ps2:my_keyboard|SIPO:register|timeout_cnt[2]                                                                                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga_driver_to_frame_buf|ps2:my_keyboard|SIPO:register|count[0]                                                                                                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db11|count[6]                                                                                                                     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db10|count[5]                                                                                                                     ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db7|count[3]                                                                                                                      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db6|count[5]                                                                                                                      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db5|count[3]                                                                                                                      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db4|count[1]                                                                                                                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db6|count[3]                                                                                                                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db5|count[7]                                                                                                                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db4|count[0]                                                                                                                      ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db3|count[1]                                                                                                                      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db2|count[5]                                                                                                                      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db1|count[1]                                                                                                                      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db0|count[1]                                                                                                                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_driver_to_frame_buf|the_vga_draw_frame_write_mem_data[10]                                                                                                                           ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_driver_to_frame_buf|the_vga_draw_frame_write_mem_data[0]                                                                                                                            ;
-; 7:1                ; 12 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_driver_to_frame_buf|the_vga_draw_frame_write_mem_address[13]                                                                                                                        ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |vga_driver_to_frame_buf|the_vga_draw_frame_write_mem_address[0]                                                                                                                         ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |vga_driver_to_frame_buf|drawY[5]                                                                                                                                                        ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |vga_driver_to_frame_buf|drawX[9]                                                                                                                                                        ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |vga_driver_to_frame_buf|blueY[2]                                                                                                                                                        ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_driver_to_frame_buf|blueX[2]                                                                                                                                                        ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|mux_6hb:mux2|l2_w15_n0_mux_dataout ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga_driver_to_frame_buf|NS                                                                                                                                                              ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |vga_driver_to_frame_buf|Add9                                                                                                                                                            ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |vga_driver_to_frame_buf|Add9                                                                                                                                                            ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |vga_driver_to_frame_buf|Selector9                                                                                                                                                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |vga_driver_to_frame_buf|Selector20                                                                                                                                                      ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |vga_driver_to_frame_buf|direction.00010                                                                                                                                                 ;
-; 9:1                ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|VGA_G[3]                                                                                                                       ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db2|count[6]                                                                                                                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db1|count[0]                                                                                                                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |vga_driver_to_frame_buf|debounce_switches:db|debounce:db0|count[7]                                                                                                                      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_driver_to_frame_buf|the_vga_draw_frame_write_mem_data[13]                                                                                                                           ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_driver_to_frame_buf|the_vga_draw_frame_write_mem_data[15]                                                                                                                           ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |vga_driver_to_frame_buf|the_vga_draw_frame_write_mem_address[7]                                                                                                                         ;
+; 10:1               ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |vga_driver_to_frame_buf|drawY[1]                                                                                                                                                        ;
+; 10:1               ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |vga_driver_to_frame_buf|drawX[2]                                                                                                                                                        ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 12 LEs               ; 15 LEs                 ; Yes        ; |vga_driver_to_frame_buf|the_vga_draw_frame_write_mem_address[0]                                                                                                                         ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |vga_driver_to_frame_buf|blueY[5]                                                                                                                                                        ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |vga_driver_to_frame_buf|blueX[2]                                                                                                                                                        ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|mux_6hb:mux2|l2_w20_n0_mux_dataout ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |vga_driver_to_frame_buf|direction                                                                                                                                                       ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; No         ; |vga_driver_to_frame_buf|Add13                                                                                                                                                           ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; No         ; |vga_driver_to_frame_buf|Add13                                                                                                                                                           ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; No         ; |vga_driver_to_frame_buf|Selector26                                                                                                                                                      ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; No         ; |vga_driver_to_frame_buf|Selector8                                                                                                                                                       ;
+; 9:1                ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|VGA_R[7]                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated ;
+; Source assignments for vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                             ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
@@ -1043,7 +1070,7 @@ Encoding Type:  One-Hot
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated ;
+; Source assignments for vga_frame_driver:my_frame_driver|vga_frame:vga_memory1|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                             ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
@@ -1052,7 +1079,7 @@ Encoding Type:  One-Hot
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated ;
+; Source assignments for vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                                    ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------------------+
@@ -1077,7 +1104,7 @@ Encoding Type:  One-Hot
 ; MEMORY_SIZE          ; 0100101100000000 ; Unsigned Binary                               ;
 ; PIXEL_VIRTUAL_SIZE   ; 0000000000000100 ; Unsigned Binary                               ;
 ; BOXV                 ; 0000001010       ; Unsigned Binary                               ;
-; BOXH                 ; 0000001000       ; Unsigned Binary                               ;
+; BOXH                 ; 0000001001       ; Unsigned Binary                               ;
 ; VGA_WIDTH            ; 0000001010000000 ; Unsigned Binary                               ;
 ; VGA_HEIGHT           ; 0000000111100000 ; Unsigned Binary                               ;
 ; VIRTUAL_PIXEL_WIDTH  ; 0000000010100000 ; Unsigned Binary                               ;
@@ -1452,7 +1479,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                 ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                 ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                 ;
-; INIT_FILE                          ; image.mif            ; Untyped                                                                 ;
+; INIT_FILE                          ; desert.mif           ; Untyped                                                                 ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                 ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                 ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                 ;
@@ -1465,7 +1492,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                                 ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                                 ;
-; CBXI_PARAMETER                     ; altsyncram_1go1      ; Untyped                                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_5ko1      ; Untyped                                                                 ;
 +------------------------------------+----------------------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1513,7 +1540,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                 ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                 ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                 ;
-; INIT_FILE                          ; image.mif            ; Untyped                                                                 ;
+; INIT_FILE                          ; desert.mif           ; Untyped                                                                 ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                 ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                 ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                 ;
@@ -1526,7 +1553,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                                 ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                                 ;
-; CBXI_PARAMETER                     ; altsyncram_1go1      ; Untyped                                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_5ko1      ; Untyped                                                                 ;
 +------------------------------------+----------------------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1574,7 +1601,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                        ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                        ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                        ;
-; INIT_FILE                          ; image.mif            ; Untyped                                                                        ;
+; INIT_FILE                          ; desert.mif           ; Untyped                                                                        ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                        ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                        ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                        ;
@@ -1587,7 +1614,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                        ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                                        ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                                        ;
-; CBXI_PARAMETER                     ; altsyncram_1go1      ; Untyped                                                                        ;
+; CBXI_PARAMETER                     ; altsyncram_5ko1      ; Untyped                                                                        ;
 +------------------------------------+----------------------+--------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1651,6 +1678,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ps2:my_keyboard"                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; led  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "btankmap:sprite"                                                                                                                                                                     ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; direction ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "vga_frame_driver:my_frame_driver|vga_frame:the_vga_draw_frame"                                                                                                                       ;
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1706,39 +1751,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 198                         ;
-;     CLR               ; 45                          ;
-;     CLR SLD           ; 2                           ;
-;     ENA               ; 19                          ;
-;     ENA CLR           ; 33                          ;
-;     ENA CLR SCLR      ; 64                          ;
+; arriav_ff             ; 269                         ;
+;     CLR               ; 37                          ;
+;     CLR SLD           ; 28                          ;
+;     ENA               ; 15                          ;
+;     ENA CLR           ; 70                          ;
+;     ENA CLR SCLR      ; 80                          ;
 ;     ENA CLR SLD       ; 29                          ;
-;     plain             ; 6                           ;
-; arriav_lcell_comb     ; 627                         ;
-;     arith             ; 193                         ;
+;     plain             ; 10                          ;
+; arriav_io_obuf        ; 2                           ;
+; arriav_lcell_comb     ; 759                         ;
+;     arith             ; 230                         ;
 ;         0 data inputs ; 8                           ;
-;         1 data inputs ; 132                         ;
-;         2 data inputs ; 48                          ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 2                           ;
-;     normal            ; 362                         ;
+;         1 data inputs ; 156                         ;
+;         2 data inputs ; 54                          ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 8                           ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 437                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 69                          ;
-;         3 data inputs ; 64                          ;
-;         4 data inputs ; 37                          ;
-;         5 data inputs ; 61                          ;
-;         6 data inputs ; 120                         ;
-;     shared            ; 72                          ;
-;         1 data inputs ; 28                          ;
-;         2 data inputs ; 34                          ;
+;         1 data inputs ; 21                          ;
+;         2 data inputs ; 78                          ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 45                          ;
+;         5 data inputs ; 99                          ;
+;         6 data inputs ; 110                         ;
+;     shared            ; 84                          ;
+;         1 data inputs ; 37                          ;
+;         2 data inputs ; 37                          ;
 ;         3 data inputs ; 8                           ;
 ;         4 data inputs ; 2                           ;
-; boundary_port         ; 82                          ;
+; boundary_port         ; 84                          ;
 ; stratixv_ram_block    ; 288                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.80                        ;
-; Average LUT depth     ; 2.73                        ;
+; Max LUT depth         ; 6.10                        ;
+; Average LUT depth     ; 2.84                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1747,7 +1795,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1757,9 +1805,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Nov 15 00:08:10 2026
+    Info: Processing started: Thu Nov 19 11:55:41 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_driver_to_frame_buf -c vga_driver_to_frame_buf
 Info (20030): Parallel compilation is enabled and will use 16 of the 20 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file verificare.v
+    Info (12023): Found entity 1: verificare File: M:/ece_287/tanksProject/verificare.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sipo.v
+    Info (12023): Found entity 1: SIPO File: M:/ece_287/tanksProject/SIPO.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2.v
+    Info (12023): Found entity 1: ps2 File: M:/ece_287/tanksProject/ps2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file latch_d_ck.v
+    Info (12023): Found entity 1: latch_D_ck File: M:/ece_287/tanksProject/latch_D_ck.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testcounting.v
+    Info (12023): Found entity 1: testCounting File: M:/ece_287/tanksProject/testCounting.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_frame_driver.v
     Info (12023): Found entity 1: vga_frame_driver File: M:/ece_287/tanksProject/vga_frame_driver.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_frame.v
@@ -1771,10 +1829,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_dri
     Info (12023): Found entity 1: vga_driver_to_frame_buf File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_driver.v
     Info (12023): Found entity 1: vga_driver File: M:/ece_287/tanksProject/vga_driver.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file subcount.v
+    Info (12023): Found entity 1: subcount File: M:/ece_287/tanksProject/subcount.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file btankmap.v
+    Info (12023): Found entity 1: btankmap File: M:/ece_287/tanksProject/btankmap.v Line: 1
 Info (12127): Elaborating entity "vga_driver_to_frame_buf" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at vga_driver_to_frame_buf.v(156): object "xcoor" assigned a value but never read File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 156
-Warning (10036): Verilog HDL or VHDL warning at vga_driver_to_frame_buf.v(157): object "ycoor" assigned a value but never read File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 157
-Warning (10034): Output port "LEDR" at vga_driver_to_frame_buf.v(55) has no driver File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
 Info (12128): Elaborating entity "debounce_switches" for hierarchy "debounce_switches:db" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 112
 Info (12128): Elaborating entity "debounce" for hierarchy "debounce_switches:db|debounce:db0" File: M:/ece_287/tanksProject/debounce.v Line: 8
 Info (10264): Verilog HDL Case Statement information at debounce.v(59): all case item expressions in this case statement are onehot File: M:/ece_287/tanksProject/debounce.v Line: 59
@@ -1788,7 +1847,7 @@ Info (12130): Elaborated megafunction instantiation "vga_frame_driver:my_frame_d
 Info (12133): Instantiated megafunction "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component" with the following parameter: File: M:/ece_287/tanksProject/vga_frame.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "image.mif"
+    Info (12134): Parameter "init_file" = "desert.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -1801,20 +1860,32 @@ Info (12133): Instantiated megafunction "vga_frame_driver:my_frame_driver|vga_fr
     Info (12134): Parameter "widthad_a" = "15"
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1go1.tdf
-    Info (12023): Found entity 1: altsyncram_1go1 File: M:/ece_287/tanksProject/db/altsyncram_1go1.tdf Line: 34
-Info (12128): Elaborating entity "altsyncram_1go1" for hierarchy "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5ko1.tdf
+    Info (12023): Found entity 1: altsyncram_5ko1 File: M:/ece_287/tanksProject/db/altsyncram_5ko1.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_5ko1" for hierarchy "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_8la.tdf
     Info (12023): Found entity 1: decode_8la File: M:/ece_287/tanksProject/db/decode_8la.tdf Line: 23
-Info (12128): Elaborating entity "decode_8la" for hierarchy "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|decode_8la:decode3" File: M:/ece_287/tanksProject/db/altsyncram_1go1.tdf Line: 44
+Info (12128): Elaborating entity "decode_8la" for hierarchy "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|decode_8la:decode3" File: M:/ece_287/tanksProject/db/altsyncram_5ko1.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_11a.tdf
     Info (12023): Found entity 1: decode_11a File: M:/ece_287/tanksProject/db/decode_11a.tdf Line: 23
-Info (12128): Elaborating entity "decode_11a" for hierarchy "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|decode_11a:rden_decode" File: M:/ece_287/tanksProject/db/altsyncram_1go1.tdf Line: 45
+Info (12128): Elaborating entity "decode_11a" for hierarchy "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|decode_11a:rden_decode" File: M:/ece_287/tanksProject/db/altsyncram_5ko1.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_6hb.tdf
     Info (12023): Found entity 1: mux_6hb File: M:/ece_287/tanksProject/db/mux_6hb.tdf Line: 23
-Info (12128): Elaborating entity "mux_6hb" for hierarchy "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_1go1:auto_generated|mux_6hb:mux2" File: M:/ece_287/tanksProject/db/altsyncram_1go1.tdf Line: 46
+Info (12128): Elaborating entity "mux_6hb" for hierarchy "vga_frame_driver:my_frame_driver|vga_frame:vga_memory0|altsyncram:altsyncram_component|altsyncram_5ko1:auto_generated|mux_6hb:mux2" File: M:/ece_287/tanksProject/db/altsyncram_5ko1.tdf Line: 46
 Info (12128): Elaborating entity "vga_driver" for hierarchy "vga_frame_driver:my_frame_driver|vga_driver:the_vga" File: M:/ece_287/tanksProject/vga_frame_driver.v Line: 139
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "btankmap" for hierarchy "btankmap:sprite" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 168
+Warning (10240): Verilog HDL Always Construct warning at btankmap.v(7): inferring latch(es) for variable "o", which holds its previous value in one or more paths through the always construct File: M:/ece_287/tanksProject/btankmap.v Line: 7
+Info (10041): Inferred latch for "o" at btankmap.v(20) File: M:/ece_287/tanksProject/btankmap.v Line: 20
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:my_keyboard" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 238
+Warning (10230): Verilog HDL assignment warning at ps2.v(36): truncated value with size 32 to match size of target (1) File: M:/ece_287/tanksProject/ps2.v Line: 36
+Info (12128): Elaborating entity "latch_D_ck" for hierarchy "ps2:my_keyboard|latch_D_ck:lceas" File: M:/ece_287/tanksProject/ps2.v Line: 21
+Info (12128): Elaborating entity "SIPO" for hierarchy "ps2:my_keyboard|SIPO:register" File: M:/ece_287/tanksProject/ps2.v Line: 24
+Info (12128): Elaborating entity "verificare" for hierarchy "ps2:my_keyboard|verificare:ver" File: M:/ece_287/tanksProject/ps2.v Line: 32
+Warning (14026): LATCH primitive "btankmap:sprite|o" is permanently enabled File: M:/ece_287/tanksProject/btankmap.v Line: 1
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 58
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 60
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[0]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 40
     Warning (13410): Pin "HEX0[1]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 40
@@ -1844,23 +1915,17 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[4]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 43
     Warning (13410): Pin "HEX3[5]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 43
     Warning (13410): Pin "HEX3[6]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 43
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 55
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 80
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 326 registers lost all their fanouts during netlist optimizations.
+Info (17049): 321 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file M:/ece_287/tanksProject/output_files/vga_driver_to_frame_buf.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 9 input pin(s) that do not drive logic
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 52
+    Warning (15610): No output dependent on input pin "KEY[1]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 52
+    Warning (15610): No output dependent on input pin "KEY[2]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 52
+    Warning (15610): No output dependent on input pin "KEY[3]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 52
     Warning (15610): No output dependent on input pin "SW[9]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 64
     Warning (15610): No output dependent on input pin "SW[8]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 64
     Warning (15610): No output dependent on input pin "SW[7]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 64
@@ -1870,15 +1935,16 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[3]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 64
     Warning (15610): No output dependent on input pin "SW[2]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 64
     Warning (15610): No output dependent on input pin "SW[1]" File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 64
-Info (21057): Implemented 1043 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1205 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 67 output pins
-    Info (21061): Implemented 673 logic cells
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 833 logic cells
     Info (21064): Implemented 288 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4922 megabytes
-    Info: Processing ended: Sun Nov 15 00:08:19 2026
-    Info: Elapsed time: 00:00:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4936 megabytes
+    Info: Processing ended: Thu Nov 19 11:55:51 2026
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:13
 
 

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Nov 16 17:02:53 2026
+Fitter Status : Successful - Sat Nov 14 16:18:41 2026
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : vga_driver_to_frame_buf
 Top-level Entity Name : vga_driver_to_frame_buf
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 489 / 32,070 ( 2 % )
-Total registers : 388
+Logic utilization (in ALMs) : 277 / 32,070 ( < 1 % )
+Total registers : 188
 Total pins : 82 / 457 ( 18 % )
 Total virtual pins : 0
 Total block memory bits : 2,359,296 / 4,065,280 ( 58 % )

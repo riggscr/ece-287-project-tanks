@@ -1,0 +1,44 @@
+module btankmap(input clk, input rst, input [9:0] drawX, input [9:0] drawY, output reg bdraw, output reg bcolor, output reg [9:0] blueX,
+		output reg [9:0] blueY); 
+
+//reg [7:0] tilemap;
+reg [3:0] boxh;
+reg [3:0] boxv;
+
+[1:0] S;
+[1:0] NS;
+
+parameter
+	START: 2'b00;
+	READ: 2'01;
+	DONE: 2'10;
+
+always @ (posedge clk or negedge rst)
+	if(rst == 1'b0)
+		S <= START;
+	else
+		S <= NS;
+
+always @ (*)
+begin
+	START: NS = READ;
+	READ: NS = DONE;
+	DONE: NS = DONE;
+end
+
+always @ (posedge clk or negedge rst)
+	if(rst == 1'b0)
+		//tilemap <= 8'd90;
+		boxh <= 4'd10;
+		boxv <= 4'd9;
+		blueX <= 10'd5;
+		blueY <= 10'd60;
+		bdraw <= 1'd0;
+	else
+		case (S)
+			START:
+			READ:
+			begin
+	
+			end
+			DONE:	

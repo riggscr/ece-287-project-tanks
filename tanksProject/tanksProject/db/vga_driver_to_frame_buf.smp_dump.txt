@@ -7,37 +7,16 @@ direction.00010 0 1 0 1
 direction.00011 1 0 0 1 
 
 State Machine - |vga_driver_to_frame_buf|S
-Name S.INIT S.CLEANUP S.DRAW S.MOVE S.KEY_SEL S.RESET 
-S.RESET 0 0 0 0 0 0 
-S.KEY_SEL 0 0 0 0 1 1 
-S.MOVE 0 0 0 1 0 1 
-S.DRAW 0 0 1 0 0 1 
-S.CLEANUP 0 1 0 0 0 1 
-S.INIT 1 0 0 0 0 1 
-
-State Machine - |vga_driver_to_frame_buf|subcount:blue_subcount|testCounting:my_right|S
-Name S.START S.DONE S.INC 
-S.START 0 0 0 
-S.INC 1 0 1 
-S.DONE 1 1 0 
-
-State Machine - |vga_driver_to_frame_buf|subcount:blue_subcount|testCounting:my_left|S
-Name S.START S.DONE S.INC 
-S.START 0 0 0 
-S.INC 1 0 1 
-S.DONE 1 1 0 
-
-State Machine - |vga_driver_to_frame_buf|subcount:blue_subcount|testCounting:my_up|S
-Name S.START S.DONE S.INC 
-S.START 0 0 0 
-S.INC 1 0 1 
-S.DONE 1 1 0 
-
-State Machine - |vga_driver_to_frame_buf|subcount:blue_subcount|testCounting:my_down|S
-Name S.START S.DONE S.INC 
-S.START 0 0 0 
-S.INC 1 0 1 
-S.DONE 1 1 0 
+Name S.WAITR S.WAITL S.WAITU S.WAITD S.DRAW S.MOVE S.KEY_SEL S.INIT S.CLEANUP 
+S.INIT 0 0 0 0 0 0 0 0 0 
+S.KEY_SEL 0 0 0 0 0 0 1 1 0 
+S.MOVE 0 0 0 0 0 1 0 1 0 
+S.DRAW 0 0 0 0 1 0 0 1 0 
+S.WAITD 0 0 0 1 0 0 0 1 0 
+S.WAITU 0 0 1 0 0 0 0 1 0 
+S.WAITL 0 1 0 0 0 0 0 1 0 
+S.WAITR 1 0 0 0 0 0 0 1 0 
+S.CLEANUP 0 0 0 0 0 0 0 1 1 
 
 State Machine - |vga_driver_to_frame_buf|vga_frame_driver:my_frame_driver|wr_id
 Name wr_id.MEM_INIT_WRITE wr_id.MEM_M0_WRITE_M1_READ wr_id.MEM_M0_READ_M1_WRITE 

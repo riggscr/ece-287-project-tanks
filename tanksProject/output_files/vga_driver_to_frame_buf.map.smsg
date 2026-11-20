@@ -1,1 +1,4 @@
+Info (10281): Verilog HDL Declaration information at vga_driver_to_frame_buf.v(52): object "KEY" differs only in case from object "key" in the same scope File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 52
+Info (10281): Verilog HDL Declaration information at vga_driver_to_frame_buf.v(184): object "boxv" differs only in case from object "BOXV" in the same scope File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 184
+Info (10281): Verilog HDL Declaration information at vga_driver_to_frame_buf.v(183): object "boxh" differs only in case from object "BOXH" in the same scope File: M:/ece_287/tanksProject/vga_driver_to_frame_buf.v Line: 183
 Warning (10268): Verilog HDL information at vga_driver.v(60): always construct contains both blocking and non-blocking assignments File: M:/ece_287/tanksProject/vga_driver.v Line: 60
